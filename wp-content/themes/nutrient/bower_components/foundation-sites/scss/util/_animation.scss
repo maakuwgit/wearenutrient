@@ -1,0 +1,88 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group css
+////
+
+// Global variables and styles
+@import 'global';
+
+#logo-main {
+	transition: all 300ms ease-out;
+	-webkit-transition: all 300ms ease-out;
+}
+
+#masthead.fixed {
+	#logo-main {
+		transition: none;
+		-webkit-transition: none;
+	}
+}
+
+h1:first-of-type,
+p.site-excerpt {
+  transition: opacity 300ms ease-in-out;
+  -webkit-transition: opacity 300ms ease-in-out;
+
+	&.animate {
+		opacity: 0;
+	}
+
+	&.animated {
+		opacity: 1;
+    transition: opacity 300ms ease-in-out;
+    -webkit-transition: opacity 300ms ease-in-out;
+	}
+}
+
+hr {
+  transition: width 300ms ease-out;
+  -webkit-transition: width 300ms ease-out;
+
+	&.animate {
+		width: 0;
+	}
+
+	&.animated {
+		width: 100%;
+    transition: width 500ms ease-out 100;
+    -webkit-transition: width 500ms ease-out 100;
+	}
+}
+
+p.site-excerpt.animated {
+	transition-delay: 150ms;
+	-webkit-transition-delay: 150ms;
+}
+
+.thumbnail {
+
+	+ figcaption.absolute {
+		h3,
+		h3 > span, 
+		p {
+			opacity: 0;
+		}
+
+		&.animate {
+			h3,
+			h3 > span, 
+			p {
+				opacity: 1;
+				transition: opacity 300ms ease-in-out;
+				-webkit-transition: opacity 300ms ease-in-out;
+  		}
+			
+			h3 > span {
+				transition-delay: 80ms;
+				-webkit-transition-delay: 80ms;
+			}
+			
+			p {
+				transition-delay: 150ms;
+				-webkit-transition-delay: 150ms;
+			}
+		}
+	}
+}

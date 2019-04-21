@@ -1,0 +1,156 @@
+// Wordpress Users Archive Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group templates
+////
+
+.page-template-template-our_team {
+	.site-content {
+
+		#primary {
+			min-height: rem-calc(424);
+	    background: -webkit-linear-gradient(top, rgba(61,26,121,0.9) 0%,rgba(124,49,105,0.9) 100%);
+	    background: linear-gradient(to bottom, rgba(61,26,121,0.9) 0%,rgba(124, 49, 105, 0.9) 100%);
+			
+			> article {
+				position: relative;
+				z-index: 1;
+			}
+		}
+
+		@include breakpoint(small only){
+			#primary {
+				> article {
+					padding-bottom: 1.625rem;
+				}
+		  }
+			
+			.thumbnail {
+				h2 {
+					span[rel="title"] {
+						display: block;
+						margin-top: rem-calc(-6);
+						font-family: $museo;
+						font-size: rem-calc(20);
+						font-style: italic;
+						letter-spacing: -0.1px;
+						.fa {
+							display: none;
+						}
+					}
+					&.absolute {
+						bottom: 1.25rem;
+				    padding-top: rem-calc(15);
+				    padding-bottom: rem-calc(15);
+					}
+				}
+
+				+ figcaption.absolute {
+				 	nav {
+						margin-top: 0.5rem;
+		    		text-align: left;
+		    	}
+					
+					p:last-of-type {
+						margin-bottom: auto;
+					}
+
+		    }
+			}
+		}
+
+		@include breakpoint(medium only){
+			#primary {
+				.site-excerpt {
+					max-width: initial;
+				}
+			}
+			
+			.thumbnail {
+				h2 {
+					span[rel="title"] {
+						.fa {
+    					margin-left: rem-calc(8);
+							font-size: rem-calc(16);
+						}
+					}
+				}
+			}
+		}
+
+		@include breakpoint(medium up){
+
+			.thumbnail {
+				h2 {
+					span[rel="title"] {
+						display: none;
+					}
+				}
+			}
+		}
+
+		@include breakpoint(large up){
+			.thumbnail {
+				h2 {
+					span[rel="title"] {
+						.fa {
+    					margin-left: rem-calc(10);
+							font-size: rem-calc(18);
+						}
+					}
+				}
+				&:hover {
+					h2 {
+						span[rel="title"] {
+							display: inline;
+						}
+						span[rel="name"] {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	[rel="users"] {
+		&.purple {
+			&.space {
+		    background: rgba(124, 49, 105, 0.9);
+			}
+		}
+
+		.row {
+			margin-left: auto;
+			margin-right: auto;
+			float: none;
+
+			[data-background-img] > img {
+  			min-width: 100%;
+    	}
+		}
+
+
+		article {	
+			@include breakpoint(small only){		
+				max-width: rem-calc(320);
+				min-width: rem-calc(320);
+			}
+
+			@include breakpoint(medium only){	
+				max-width: rem-calc(640);
+				min-width: rem-calc(640);
+			}
+
+			@include breakpoint(large up){		
+				max-width: rem-calc(1024);
+				min-width: rem-calc(1024);
+			}
+		}
+		
+		@include breakpoint(xxlarge up){
+			padding-bottom: 4.5rem;
+		}
+	}
+}

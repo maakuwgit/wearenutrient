@@ -1,0 +1,120 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group markup
+////
+
+@mixin header {
+
+	.site-header {
+		position: absolute;
+		width: 100%;
+		max-width: inherit;
+		background-color: $white;
+		z-index: 10;
+
+		&.fixed {
+			position: fixed;
+		}
+
+		figcaption {
+	    color: $pink }
+		> div {
+			max-width: 61.25rem;
+			padding-top: 0.875rem;
+			padding-bottom: 0.875rem }
+	}
+
+	@include breakpoint(small only) {
+		.site-header {
+			> div {
+	      @include mobile-constraints;
+			}
+		}
+	}
+
+	@include breakpoint(medium down) {
+		#masthead {
+			figure[rel="logo"] {
+				padding-left: rem-calc(24);
+
+				figcaption { 
+					font-size: rem-calc(11.5);
+					width: 150%; 
+					opacity: 1 !important;
+					height: 0.71875rem !important;
+					visibility: visible !important;
+				}
+			}
+
+			nav[rel="mobile"] {
+			  margin-top: rem-calc(6);
+				padding-right: rem-calc(18);
+
+				button,
+				.button {
+			  	/*max-width: rem-calc(140);*/
+					margin-bottom: auto;
+/*
+					&.large {
+					  padding-top: rem-calc(15);
+			    	padding-bottom: rem-calc(10);
+			    }
+*/
+			    &:focus {
+			    	outline: none;
+			    }
+
+			    .fa-close {
+			    	line-height: 0;
+			    }
+				}
+			}
+		}
+	}	
+
+	@include breakpoint(medium only) {
+		#masthead {
+			nav[rel="mobile"] {
+				button,
+				.button {
+			    padding-bottom: rem-calc(14);
+			    padding-top: rem-calc(18);
+			    margin-bottom: rem-calc(7);
+			  }
+		  }
+		}
+	}
+
+	@include breakpoint(large up){
+		.site-header {
+
+			> div {
+				/*padding-top: 4.125rem;
+				padding-bottom: 2.875rem;*/
+				padding-top: 1.25rem;
+				padding-bottom: 1.25rem;
+			}
+
+			&.fixed {
+				> div {
+			    padding-top: 0.9375rem;
+    			padding-bottom: 0.875rem;
+    		}
+    	}
+		}
+
+		#masthead:not(.fixed) #site-navigation {
+			margin-top: rem-calc(17);
+		}
+
+		#site-navigation {
+			margin-right: rem-calc(-25);
+
+			#menu-primary.menu > li > a {
+				letter-spacing: 0.4px;
+			}
+		}
+	}
+}

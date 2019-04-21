@@ -1,0 +1,185 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group markup
+////
+@import 'widgets/calendar';
+@import 'widgets/recent_entries';
+@import 'widgets/rss';
+@import 'widgets/tagcloud';
+@import 'widgets/textwidget';
+@import 'widgets/contact_form_7';
+
+@mixin widgets {
+  
+  .content-area:not(#primary) {
+    &[rel="social"] .textwidget .row.collapse, 
+    &[rel="widgets"] fieldset.row {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  [rel="widgets"] {
+    overflow: hidden;
+    
+    nav[rel="social"] {
+      padding-left: 0;
+      padding-right: 0;
+      a {
+        margin-right: rem-calc(20);
+      }
+
+      a,
+      a:hover,
+      a:focus {
+        display: inline-block;
+        color: $pink;
+        font-size: rem-calc(38);
+        width: rem-calc(58);
+        height: rem-calc(58);
+        text-align: center;
+        border-radius: rem-calc(50);
+        border-width: 2px;
+        border-style: solid;
+        outline: none;
+
+        em {
+          line-height: 1.3125;
+        }
+      }
+    }
+
+    .widget {
+      position:relative;
+    }
+
+    .widgets-title {
+      padding-top: rem-calc(8);
+      position:relative;
+    }
+
+    > p:not(.widget-title) {
+      font-size: rem-calc(16);
+      font-weight: 100;
+    }
+
+    .widget-title {
+      font-size: rem-calc(20);
+      color: $lilac;
+      font-family: $museo;
+      line-height: 1.1;
+    }
+
+    .widget-area > :last-child,
+    .wpcf7-submit, 
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .widget.footer {
+    .widget-title {
+      margin-bottom: rem-calc(8);
+      font-family: $museo;
+      font-size: rem-calc(18);
+      line-height: 1rem;
+    }
+  }
+
+  @include breakpoint(small only) {
+    [rel="widgets"] h4, 
+    .widget,
+    .widget.column.end:last-child:last-child, 
+    .widget.end.columns:last-child:last-child {
+      @include mobile-constraints;
+
+      &.footer {
+        float: none;
+        .widget-title {
+          margin-top: rem-calc(32);
+        }
+      }
+    }
+  }
+  
+  @include breakpoint(medium up) {
+    [rel="widgets"] {
+      figure#widget-map {
+        > div[rel="map"]{
+          position: absolute;
+        }
+      }
+
+      .widget {
+        padding-top: 0.5rem;
+      
+        .widget-title {
+          margin-bottom: rem-calc(31);
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium only) {
+    .widget.footer {
+      max-width: rem-calc(415);
+
+      .widget-title {
+        margin-top: rem-calc(16);
+      }
+    }
+  }
+
+  @include breakpoint(medium down) {
+    [rel="widgets"] {
+      > .row .widget:last-of-type {
+        margin-bottom: auto;
+      }
+      
+      nav[rel="social"] {
+        float: none;
+        margin-top: rem-calc(12);
+      }
+
+      #widget-map.row {
+        margin-left: 0;
+        margin-right: 0;
+
+        address,
+        > div {
+          margin-top: rem-calc(10);
+        }
+      }
+
+      .widget {
+        padding-top: 0.3125rem;
+        margin-bottom: rem-calc(32);
+      
+        .widget-title {
+          margin-bottom: rem-calc(2);
+          line-height: 1.1;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(large up) {
+    [rel="widgets"] {
+      nav[rel="social"] {
+        a:hover,
+        a:focus {
+          color: $global-hover-color;
+          border-color: $global-hover-color;
+        }
+      }
+
+      .widget {
+        &:nth-of-type(2){
+          margin-top: rem-calc(-105);
+        }
+      }
+    }
+  }
+}

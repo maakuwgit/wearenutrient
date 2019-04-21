@@ -1,0 +1,30 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group widgets
+////
+
+@mixin tagcloud {
+  .tagcloud {
+    a {
+      border: 1px solid #d1d1d1;
+      border-radius: 2px;
+      display: inline-block;
+      font-family: Montserrat, "Helvetica Neue", sans-serif;
+      line-height: 1;
+      margin: 0 0.1875em 0.4375em 0;
+      padding: 0.5625em 0.4375em 0.5em;
+      &a:hover,
+      &a:focus {
+        border-color: #007acc;
+        color: #007acc;
+        outline: 0 }
+      @include breakpoint(medium up){
+        a {
+          margin: 0 0.2307692308em 0.5384615385em 0;
+          padding: 0.5384615385em 0.4615384615em 0.4615384615em }
+      }
+    }
+  }
+}

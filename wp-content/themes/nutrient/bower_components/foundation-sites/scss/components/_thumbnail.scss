@@ -1,0 +1,184 @@
+// Foundation for Sites by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+////
+/// @group thumbnail
+////
+
+/// Border around thumbnail images.
+/// @type Border
+$thumbnail-border: solid 4px $white !default;
+
+/// Bottom margin for thumbnail images.
+/// @type Length
+$thumbnail-margin-bottom: $global-margin !default;
+
+/// Box shadow under thumbnail images.
+/// @type Shadow
+$thumbnail-shadow: 0 0 0 1px rgba($black, 0.2) !default;
+
+/// Box shadow under thumbnail images.
+/// @type Shadow
+$thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5) !default;
+
+/// Transition proprties for thumbnail images.
+/// @type Transition
+$thumbnail-transition: box-shadow 200ms ease-out !default;
+
+/// Default radius for thumbnail images.
+/// @type Number
+$thumbnail-radius: $global-radius !default;
+
+/// Adds thumbnail styles to an element.
+@mixin thumbnail {
+  border: $thumbnail-border;
+  box-shadow: $thumbnail-shadow;
+  display: inline-block;
+  line-height: 0;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  transition: $thumbnail-transition;
+  border-radius: $thumbnail-radius;
+  margin-bottom: $thumbnail-margin-bottom;
+
+  &:hover,
+  &:focus {
+    box-shadow: $thumbnail-shadow-hover;
+  }
+}
+
+@mixin foundation-thumbnail {
+  .thumbnail {
+    @include thumbnail;
+    opacity: 1 !important;
+
+    @include breakpoint(small only) {
+      h2 {
+        font-size: rem-calc(30);
+      }
+
+      &.absolute {
+        nav {
+          margin-top: rem-calc(10);
+        }
+      }
+
+      & + figcaption {
+        p {
+          font-size: rem-calc(13);
+          line-height: 1.3;
+        }
+      }
+    }
+
+    @include breakpoint(medium only) {
+      h2 {
+        font-size: rem-calc(24);
+      }
+
+      &.absolute {
+        nav {
+          margin-top: rem-calc(10);
+          margin-left: 0;
+        }
+      }
+      
+      & + figcaption {
+        p {
+          font-size: rem-calc(13);
+          line-height: 1.2;
+        }
+      }
+    }
+
+    @include breakpoint(large up) {
+      h2 {
+        font-size: rem-calc(28);
+      }
+      
+      & + figcaption {
+        &.absolute {
+          padding-top: rem-calc(24);
+        }
+        
+        p {
+          font-size: rem-calc(14);
+          line-height: 1.3;
+        }
+      }
+    }
+
+    h2 {
+      text-transform: capitalize;
+      color: #204793;
+      background-color: rgba($white, 0.6);
+
+      &.absolute {
+        bottom: rem-calc(15);
+        width: 100%;
+        margin-bottom: auto;
+        white-space: nowrap;
+        padding: rem-calc(15);
+        padding-bottom: rem-calc(11);
+      }
+    }
+
+    & + figcaption {
+      padding: rem-calc(32) rem-calc(24) rem-calc(24) rem-calc(24);
+      color: white;
+
+      h3 {
+        font-size: rem-calc(21);
+        text-transform: capitalize;
+
+        .subhead {
+          margin-top: rem-calc(5);
+          font-size: rem-calc(16);
+          font-style: italic;
+        }
+      }
+
+      nav {
+        a {
+          margin-right: rem-calc(10);
+          font-family: $header-font-family;
+          font-size: rem-calc(13);
+          color: $cerulean;
+          text-decoration: underline;
+
+          &:hover {
+            color: $cobalt;
+          }
+
+          &[rel="close"] {
+            position: absolute;
+            top: rem-calc(10);
+            right: rem-calc(20);
+            margin: auto;
+            font-size: rem-calc(30);
+            color: $white;
+          }
+        }
+      }
+
+      p {
+        font-family: $header-font-family;
+        letter-spacing: -0.2px;
+      }
+
+      &.absolute {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($navy, 0.9);
+
+        nav {
+          margin: auto;
+        }
+      }
+    }
+  }
+}

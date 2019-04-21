@@ -1,0 +1,945 @@
+// Wordpress Page Template "Our Approach" Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group templates
+////
+
+body > header { position: relative; z-index: 2; }
+
+.page-template-template-our_approach {
+	.site-content {
+
+		div > *:last-child {
+			margin-bottom: auto;
+		}
+
+		circle,
+		path,
+		svg {
+			transform-origin: center center;
+			-wekbit-transform-origin: center center;
+			-o-transform-origin: center center;
+			-ms-transform-origin: center center;
+			-moz-transform-origin: center center;
+		}
+
+		#dot2,
+		#dot2b, 
+		#dot3,
+		#dot4,
+		#dot4b,
+		#dot5,
+		#dot5-ring-inner,
+		#dot5-ring-outer,
+		#dot5-circle-outer, 
+		#dot6,
+		#dot7,
+		#decision-tree,
+		#decision-tree .layer,
+		#tree,
+		#outer-rings,
+		#inner-rings,  
+    #decision-girl, 
+    #dot2-arcs,
+		#girl-circle-inner, 
+		#girl-circle-outer {
+		  position: absolute;
+	  }
+
+	  #dot5-circle-outer, 
+		#tree {
+	    z-index: 3;
+	    opacity: 1;
+	  }
+
+		#inner-rings,
+		#outer-rings {
+			&.animate {
+				.outer-ring,
+				.inner-ring {
+					opacity: 0;
+				}
+			}
+			.outer-ring,
+			.inner-ring {
+				-wekbit-transform-origin: center center;
+				-o-transform-origin: center center;
+				-ms-transform-origin: center center;
+				-moz-transform-origin: center center;
+				transform-origin: center center;
+			}
+		}
+
+		#outer-rings {
+			z-index: 1;
+		}
+
+		#dot2,
+		#dot2b,
+		#dot3,
+		#dot4,
+		#dot4b,
+		#dot5,
+		#dot5-ring-inner,
+		#dot5-ring-outer,
+		#dot6,
+		#dot7,
+		#test-arcs, 
+		#inner-rings,
+    #decision-girl {
+			z-index: 2;
+		}
+
+		#girl-circle-inner, 
+		#girl-circle-outer {
+      z-index: 3;
+    }
+
+    #decision-girl {
+			&.animate {
+				opacity: 0;
+			}
+		}
+
+		#decision-girl-circle-inner, 
+		#decision-girl-circle-outer {
+			&.animate {
+				-ms-transform: scale(0);
+				-webkit-transform: scale(0);
+				transform: scale(0);
+			}
+		}
+
+		#dot2,
+		#dot5,
+		#dot7 {
+	    width: rem-calc(35);
+	    height: rem-calc(35);
+    }
+
+		#dot2b,
+		#dot4b {
+	    width: rem-calc(8);
+	    height: rem-calc(8);
+    }
+
+		#dot3 {
+	    width: rem-calc(24);
+	    height: rem-calc(24);
+    }
+
+		#dot4 {
+	    width: rem-calc(28);
+	    height: rem-calc(28);
+    }
+
+		#dot5-ring-outer {
+	    width: rem-calc(126);
+	    height: rem-calc(126);
+    }
+
+		#dot5-ring-inner {
+	    width: rem-calc(109);
+	    height: rem-calc(109);
+    }
+
+		#dot6 {
+	    width: rem-calc(22);
+	    height: rem-calc(22);
+    }
+
+    #dot2-arcs {
+	    width: rem-calc(150);
+	    height: rem-calc(150);
+	    overflow: visible;
+    }
+
+		/*Dev Note: what's this for? Breaks the design and makes it not match the comp?
+		.content-area:not(#primary) {
+			padding: 3.75rem 1.25rem 3.625rem 1.25rem;
+		}
+		*/
+		.content-area:not(#primary) {
+			&.customers {
+				h3 {
+					font-family: $body-font-family;
+					font-weight: 300;
+				}
+
+				p {
+					color: $light-purple;
+					font-family: $museo;
+					font-weight: 300;
+					line-height: 1.6;
+				}
+			}
+			
+			&.stats {
+				padding-top: 0;
+
+				figure {
+					overflow: hidden;
+
+					svg#decision_tree-stats {
+					  width: rem-calc(109);
+			    	height: rem-calc(247);
+				    margin-top: rem-calc(120);
+				    transform: rotate(145deg);
+			    }
+
+					> div {
+						max-width: rem-calc(328);
+						max-height: rem-calc(328);
+					  text-align: center;
+				    border-radius: 500px;
+				    overflow: hidden;
+				    margin-bottom: rem-calc(16);
+				    img {
+				    	width: 100%;
+				    	height: auto;
+				    }
+			    }
+
+					figcaption {
+						p {
+							color: $light-purple;
+							font-weight: 300;
+							font-size: 1.125rem; 
+							line-height: 1.125;
+							text-align: left; 
+						}
+					}
+				}
+			}
+
+			&.healthy-motivation {
+				padding-left: 0;
+				padding-right: 0;
+
+				h2 {
+					position: relative;
+					font-size: 11.75vw;
+					font-weight: bold;
+					color: #9323e2;
+					line-height: 0.8;
+					word-wrap: break-word;
+					text-transform: none;
+
+				   	@include breakpoint(small only) {
+				   	 	@include breakpoint(portrait) {
+					   		& { font-size: 14.75vw; }
+					   	}
+				   	}
+
+				  svg {
+						display: block;
+						max-width: 100%;
+						margin: auto;
+						height: auto;
+						min-height: 18vw;
+				  }
+
+				}
+
+				h3 {
+					color: white;
+					font-weight: 300;
+					font-size: rem-calc(42);
+					font-family: $bloggersans;
+					line-height: rem-calc(52);
+					text-transform: uppercase;
+				}
+				
+				.hm-circles {
+					width: 100%;
+				}
+
+				#hm,
+				#hm_dots12,
+				#hm_dots3 {
+			    width: rem-calc(1200);
+			    max-width: 100%;
+	        top:0;
+				  margin-bottom: auto;
+				  left: 0;
+
+				  svg {
+				  	width: rem-calc(200);
+				  	height: rem-calc(200);
+				  }
+
+			    .layer {
+			      display: block;
+			      position: absolute;
+			      height: inherit;
+			      width: inherit;
+			    }
+			  }
+
+				.flowchart {
+					width: 100%;
+					position: relative;
+					bottom: 0; left: 0;
+					margin-top: -10em;
+					max-width: 1200px;
+					margin-left: auto; margin-right: auto;
+					> div {
+						position: absolute;
+						text-align: center;
+						h4 {
+							color: white;
+							font-family: $header-font-family;
+							font-weight: 100;
+							font-size: 2.25rem;
+							line-height: 1;
+							padding-left: 33%;
+							padding-top: 0.25em; padding-bottom: 0.75em;
+							text-align: left; 
+							text-transform: none;
+							word-wrap: normal !important;
+						}
+						p {
+							color: $light-purple;
+							font-weight: 300;
+							font-size: 1.25rem;
+							font-weight: 1.8;
+						}
+						&.flowchart-background {
+							position: static !important;
+							width: 100vw; 
+							height: 100vw;
+							max-width: 1200px; 
+							max-height: 1200px;
+							div {
+								position: absolute;
+								width: inherit;
+								max-width: inherit;
+								height: inherit;
+								max-height: inherit;
+								top: 0; 
+								left: 0;
+								&.vm-hm,
+								&.bb-hm {
+									height: 100%;
+									width: 100%;
+								}
+								&.vm,
+								&.bb,
+								&.plus {
+									img[src*=".svg"] {
+								    width: rem-calc(1200);
+								  }
+								}
+							}
+						}
+						&.dvm { top: 17.5%; left: 18%; width: 25%; }
+						&.bb { top: 18.5%; left: 58%; width: 25%; }
+						&.hm {
+							top: 73.5%; left: 31%; width: 38%; 
+							h4 { text-align: center; padding-bottom: 0.25em; padding-left: 0; }
+						}
+
+						@media screen and (max-width: 1023px) {
+							&.dvm { 
+								left: 13%; width: 38%; 
+								h4 { padding-left: 36%; font-size: 1.8rem; }
+							}
+							&.bb {
+								left: 55%; width: 38%;
+								h4 { padding-left: 30%; width: 65%; font-size: 1.8rem; }
+							}
+							&.hm {
+								h4 { font-size: 1.8rem; }
+							}
+						}
+						@media screen and (max-width: 895px) {
+							&.dvm {
+								width: 33%;
+								h4 { padding-left: 40%; }
+								p { font-size: 1rem; }
+							}
+							&.bb {
+								p { font-size: 1rem; }
+							}
+							&.hm {
+								left: 25%; width: 50%;
+								p { font-size: 1rem; }
+							}
+						}
+						@media screen and (max-width: 767px) {
+							&.dvm {
+								left: 10%; width: 40%;
+								h4 { font-size: 1.5rem; }
+							}
+							&.bb {
+								left: 55%; width: 40%;
+								h4 { font-size: 1.5rem; }
+							}
+							&.hm {
+								h4 { font-size: 1.5rem; }
+							}
+						}
+						@media screen and (max-width: 639px) {
+							& h4 { font-size: 1.625rem !important; padding-left: 36% !important; padding-top: 0; padding-bottom: 0.5em; }
+							& p { font-size: 1.125rem !important; line-height: 1.1666 !important; padding: 0 10% 1.5rem !important; margin-bottom: 0; }
+
+							&.dvm {
+								position: relative; top: auto; left: auto; width: 320px; margin: 0 auto; background: url(#{$img-path}vn-mobile.svg) 0 0 no-repeat; background-size: 100% auto;
+								.dvm-bb-line { width: 100%; height: 100%; position: absolute; top: 50px; max-height: 248px; }
+							}
+							&.bb {
+								position: relative; top: auto; left: auto; width: 320px; margin: 0 auto; background: url(#{$img-path}bb-mobile.svg) 0 0 no-repeat; background-size: 100% auto;
+								.bb-hm-line { width: 100%; height: 100%; position: absolute; top: 40px; max-height: 268px; }
+							}
+							&.hm {
+								position: relative; top: auto; left: auto; width: 320px; margin: -312px auto 0; background: url(#{$img-path}hm-mobile.png) 0 0 no-repeat; background-size: 100% auto; height: 675px;
+								h4 { padding-left: 0 !important; padding-top: 456px !important; }
+							}
+						}
+					}
+
+					@media screen and (max-width: 1023px) {
+						& { margin-top: -9em; }
+					}
+					@media screen and (max-width: 895px) {
+						& { margin-top: -6em; }
+					}
+					@media screen and (max-width: 639px) {
+						& {  margin-top: 3em; }
+					}
+				}
+
+				@media screen and (max-width: 639px) {
+					& { padding-bottom: 0 !important; }
+					h3 { font-size: 1.875rem !important; line-height: 1.25em !important; }
+				}
+			}
+		}
+
+		@include breakpoint(small only){
+			h1:first-of-type {
+				font-size: rem-calc(46);
+				line-height: 1.125;
+			}
+
+			#decision-tree {
+				top: rem-calc(-50);
+		    right: rem-calc(185);
+		  }
+
+			#dot5-circle-outer, 
+			#tree {
+		    width: rem-calc(250);
+		    height: rem-calc(564);
+		    top: rem-calc(-156);
+		    transform: rotate(14deg);
+	    }
+
+			#dot2 {
+			  top: rem-calc(-13);
+		    left: rem-calc(189);
+	    }
+
+	    #dot2-arcs {
+		    top: rem-calc(119);
+		    left: rem-calc(118);
+		    width: rem-calc(85);
+		    height: rem-calc(85);
+		    transform: rotate(9deg);
+	    }
+
+			#dot2b {
+			  top: rem-calc(9);
+		    left: rem-calc(177);
+	    }
+
+			#dot3 {
+			  top: rem-calc(97);
+		    left: rem-calc(195);
+	    }
+
+			#dot4 {
+			  top: rem-calc(159);
+		    left: rem-calc(136);
+		    width: rem-calc(20);
+		    height: rem-calc(20);
+	    }
+
+			#dot4b {
+			  top: rem-calc(144);
+		    left: rem-calc(99);
+	    }
+
+			#dot5 {
+			  top: rem-calc(230);
+		    left: rem-calc(10);
+		    width: rem-calc(18);
+		    height: rem-calc(18);
+	    }
+
+			#dot6 {
+			  top: rem-calc(274);
+		    left: rem-calc(10);
+		    width: rem-calc(14);
+		    height: rem-calc(14);
+	    }
+
+			#dot7 {
+			  top: rem-calc(370);
+		    left: rem-calc(32);
+		    width: rem-calc(22);
+		    height: rem-calc(22);
+	    }
+
+	    #decision-girl {
+	      width: rem-calc(116);
+		    max-width: none;
+		    top: rem-calc(250);
+		    right: rem-calc(-204);
+	    }
+
+			.content-area:not(#primary) {
+				&.customers, 
+				&.stats {
+					p {
+				    font-size: rem-calc(18);
+	  				line-height: 1.125;
+	  			}
+	  		}
+
+				&.customers {
+
+					h3 {
+						padding-top: rem-calc(24);
+						font-size: rem-calc(34); 
+						line-height: 1.125;
+					}
+
+					p:first-of-type {
+						padding-right: rem-calc(60);
+					}
+				}
+
+				&.stats {
+					figure {
+						margin-bottom: rem-calc(50);
+
+						&:first-of-type {
+							> div {
+						    margin-top: rem-calc(-48);
+						  }
+					  }
+
+						figcaption {
+							max-width: rem-calc(280);
+						}
+
+						&:last-of-type {
+							margin-bottom: auto;
+						}
+
+						button {
+						  display: block;
+					    width: 100%;
+					    margin: auto;
+				    }
+					}
+				}
+			}
+		}
+
+		@include breakpoint(medium down) {
+
+	    #outer-rings,
+	    #inner-rings, 
+	    #dot5-ring-inner,
+	    #dot5-ring-outer,
+	    #girl-circle-outer,
+	    #girl-circle-inner {
+	    	display: none;
+	    }
+
+	    #decision-girl {
+	    	z-index: 4;
+	    }
+
+			.content-area:not(#primary) {
+				&.stats {
+					figure {
+						figcaption {
+							text-align: center;
+							margin-left: auto;
+							margin-right: auto;
+						}
+					}
+				}
+				&.healthy-motivation .flowchart > div.flowchart-background {
+					div.vm-hm,
+					div.bb-hm {
+						height: 100%;
+					}
+				}
+			}
+		}
+
+		@include breakpoint(medium up){
+
+			.content-area:not(#primary) {
+				&.customers {
+					h3 {
+						font-size: rem-calc(50);
+						&:nth-of-type(2n) { 
+							padding-top: 4rem; 
+						}
+		    	}
+
+		    	p {
+		    		max-width: rem-calc(450);
+		    		font-size: rem-calc(20);
+		    		letter-spacing: -0.1px;
+		    	}
+				}
+			}
+
+			#healthy-motivation {
+				h2 img {
+				  width: rem-calc(1102);
+		    	margin-bottom: rem-calc(20);
+		    }
+		  }
+		}
+
+		@include breakpoint(medium only){
+			#decision-tree {
+		    right: 0;
+
+				&[style] {
+		    	right: rem-calc(-230);
+			  }
+			}
+
+			#dot5-circle-outer, 
+			#tree {
+		    right: rem-calc(-100);
+		    top: rem-calc(-300);
+			  width: rem-calc(450);
+			  height: rem-calc(1015);
+		    transform: rotate(20deg);
+    	}
+
+			#dot2 {
+			  top: rem-calc(-13);
+		    left: rem-calc(189);
+	    }
+
+	    #dot2-arcs {
+		    top: rem-calc(205);
+		    left: rem-calc(-142);
+		    transform: rotate(22deg);
+	    }
+
+			#dot2b {
+			  top: rem-calc(9);
+		    left: rem-calc(177);
+	    }
+
+			#dot3 {
+			  top: rem-calc(97);
+		    left: rem-calc(195);
+	    }
+
+			#dot4 {
+			  top: rem-calc(278);
+		    left: rem-calc(-110);
+	    }
+
+			#dot4b {
+			  top: rem-calc(241);
+		    left: rem-calc(-170);
+	    }
+
+			#dot5 {
+			  top: rem-calc(373);
+		    left: rem-calc(-356);
+	    }
+
+			#dot5-ring-inner {
+			  top: rem-calc(336);
+		    left: rem-calc(-393);
+	    }
+
+			#dot5-ring-outer {
+			  top: rem-calc(327);
+		    left: rem-calc(-402);
+	    }
+
+			#dot6 {
+			  top: rem-calc(460);
+		    left: rem-calc(-356);
+	    }
+
+			#dot7 {
+			  top: rem-calc(642);
+		    left: rem-calc(-334);
+	    }
+
+    	#decision-girl {
+		    top: rem-calc(420);
+		    right: rem-calc(236);
+		  }
+
+	    #decision-girl,
+	    #decision-girl-li {
+	      width: rem-calc(232);
+	    }
+	    
+	    #girl-circle-inner {
+		    top: rem-calc(472);
+		    right: rem-calc(52);
+		    width: rem-calc(134);
+			}
+
+	    #girl-circle-outer {
+		    top: rem-calc(436);
+		    right: rem-calc(19);
+		    width: rem-calc(202);
+			}
+
+			.content-area:not(#primary) {
+				&.customers {
+					p:first-of-type {
+						padding-right: rem-calc(60);
+					}
+				}
+
+				&.stats {
+					figure {
+						> div {
+					    margin-top: rem-calc(-48);
+    					margin-right: auto;
+					    margin-left: auto;
+					  }
+
+						figcaption {
+							max-width: rem-calc(190);
+							text-align: left;
+						}
+					}
+				}
+			}
+		}
+		
+		@include breakpoint(large up) {
+			#decision-tree {
+				right: 13%;
+
+				&[style] {
+			    right: -7%;
+			  }
+
+		    &.locked {
+		    	position: fixed;
+		    	top: rem-calc(60);
+
+		    	&:not([style]) {
+		    		right: rem-calc(156);
+		    	}
+		    }
+			}
+
+			#dot5-circle-outer, 
+			#tree {
+		    top: rem-calc(-424);
+		    right: rem-calc(-160);
+		    width: rem-calc(470);
+		    height: rem-calc(1061);
+	    }
+
+			#dot2 {
+			  top: rem-calc(-180);
+		    left: rem-calc(-16);
+	    }
+
+	    #dot2-arcs {
+		    top: rem-calc(85);
+		    left: rem-calc(-88);
+	    }
+
+			#dot2b {
+			  top: rem-calc(-131);
+		    left: rem-calc(-27);
+	    }
+
+			#dot3 {
+			  top: rem-calc(21);
+		    left: rem-calc(50);
+	    }
+
+			#dot4 {
+			  top: rem-calc(165);
+		    left: rem-calc(-26);
+	    }
+
+			#dot4b {
+			  top: rem-calc(154);
+		    left: rem-calc(-104);
+	    }
+
+			#dot5 {
+			  top: rem-calc(344);
+		    left: rem-calc(-235);
+	    }
+
+			#dot5-ring-inner {
+			  top: rem-calc(308);
+		    left: rem-calc(-272);
+	    }
+
+			#dot5-ring-outer {
+			  top: rem-calc(299);
+		    left: rem-calc(-281);
+	    }
+
+			#dot6 {
+			  top: rem-calc(435);
+		    left: rem-calc(-208);
+	    }
+
+			#dot7 {
+			  top: rem-calc(600);
+		    left: rem-calc(-120);
+	    }
+
+	    #decision-girl,
+	    #decision-girl-li {
+		    width: rem-calc(300);
+	    }
+
+	    #decision-girl {
+		    top: rem-calc(275);
+		    right: rem-calc(102);
+		  }
+	    
+	    #girl-circle-inner {
+		    top: rem-calc(352);
+		    right: rem-calc(-124);
+		    width: rem-calc(150);
+			}
+
+	    #girl-circle-outer {
+		    top: rem-calc(300);
+		    right: rem-calc(-173);
+		    width: rem-calc(250);
+			}
+
+	    #outer-rings,
+	    #inner-rings, {
+	      top: rem-calc(-734);
+		    right: rem-calc(-450);
+		    width: rem-calc(1200);
+		    height: rem-calc(1200);
+	    }
+
+			#primary {
+				min-height: rem-calc(650);
+
+				hr {
+					margin-top: rem-calc(41);
+					margin-bottom: rem-calc(43);
+				}
+			}
+
+			.content-area:not(#primary) {
+				&.stats {
+					padding-bottom: 0;
+
+					figure {
+						padding-bottom: rem-calc(32);
+
+						&:nth-of-type(odd){
+							figcaption {
+								max-width: rem-calc(300);
+    						margin-left: rem-calc(65);
+							}
+						}
+
+						&:nth-of-type(even){
+							figcaption {
+								margin-left: rem-calc(45);
+							}
+						}
+
+						> div:first-of-type {
+							margin-top: rem-calc(-48);
+						}
+
+						figcaption {
+							p {
+								font-size: rem-calc(20);
+								line-height: 1.5;
+							}
+						}
+					}
+				}
+			}
+
+			.post-thumbnail {
+			  background-position: 104% 5.5%;
+    		background-size: 52.8125rem 65.375rem;
+    		background-repeat: no-repeat;
+	    }
+		}
+
+		@include breakpoint(xlarge up) {
+			.content-area:not(#primary) {
+				&.healthy-motivation {
+					h2 {
+						font-size: 8.75vw;
+					}
+				}
+			}
+		}
+
+		@include breakpoint(xxlarge up) {
+			#decision-tree {
+				&[style]:not(.locked) {
+		    	right: rem-calc(96);
+		    }
+
+		    &.locked {
+		    	right: 116px;
+		    }
+			}
+
+			.content-area:not(#primary) {
+				&.healthy-motivation {
+					h2 {
+						font-size: rem-calc(168);
+					}
+				}
+			}
+		}
+	}
+
+	#primary {
+		&.plum {
+			background-color: $plum;
+			&.semi,
+			&.space,
+			&.semi.space {
+		    background: -webkit-linear-gradient(top, rgba($purple,0.8) 0%,rgba(124,49,105,0.8) 100%);
+		    background: linear-gradient(to bottom, rgba($purple,0.8) 0%,rgba(124, 49, 105, 0.8) 100%);
+			}
+		} 
+		&.purple {
+			&.semi, 
+			&.space,
+			&.semi.space {
+				background-color: rgba($purple, 0.9);
+		    background: -webkit-linear-gradient(top, rgba(black,0.8) 0%,rgba($purple,0.8) 60%);
+		    background: linear-gradient(to bottom, rgba(black,0.8) 0%,rgba($purple, 0.8) 60%);
+			}
+		}
+	}
+}

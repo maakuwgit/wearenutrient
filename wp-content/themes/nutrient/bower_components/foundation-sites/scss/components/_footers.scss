@@ -1,0 +1,97 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group markup
+////
+
+@mixin footer {
+  footer[role="contentinfo"] {
+    font-size: 0.6875rem;
+    color: white;
+    text-transform: uppercase;
+    background-color: $plum;
+    position: relative;
+    z-index: 10;
+
+    nav,
+    .site-info {
+      vertical-align: middle;
+    }
+
+    a {
+      color: inherit;
+      line-height: 1.125;
+      text-decoration: underline;
+      &:hover,
+      &:focus {
+        color: $global-hover-color;
+      }
+    }
+
+    a, p, dl, dd, dt {
+      font-weight: bold;
+    }
+
+    .row {
+      max-width: 61.25rem;
+    }
+
+    .site-info {
+      display: block;
+      padding: rem-calc(10) rem-calc(12);
+      margin: auto;
+      font-family: $avenir;
+      font-size: inherit;
+      line-height: 1.125;
+      text-transform: none;
+    }
+
+    button, 
+    .button {
+      color: white;
+    }
+
+    @include breakpoint(small only){
+      padding-top: rem-calc(20);
+      padding-bottom: rem-calc(8);
+
+      nav {
+        float: none;
+        display: table;
+        margin: auto;
+      }
+      
+      .site-info {
+        padding-top: rem-calc(10);
+        padding-bottom: 0;
+      }
+
+      nav {
+        width: 100%;
+        padding-left: rem-calc(10);
+        padding-right: rem-calc(10);
+      }
+      
+      a,
+      a:hover {
+        padding: rem-calc(3) rem-calc(12) 0 rem-calc(12);
+        letter-spacing: 0.4px;
+      }
+
+      .menu {
+        text-align: center;
+        & > li {
+          display: inline-block;
+        }
+      }
+    }
+
+    @include breakpoint(medium only){
+
+      #menu-footer.menu > li:first-of-type > a {
+        padding-left: rem-calc(24);
+      }
+    }
+  }
+}

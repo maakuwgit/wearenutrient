@@ -1,0 +1,37 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group widgets
+////
+
+@mixin rss {
+  .widget_rss {
+    .rsswidget {
+      img {
+        margin-top: -0.375em }
+    }
+
+    .rss-date,
+    cite {
+      color: $text-gray;
+      display: block;
+      font-family: Montserrat, "Helvetica Neue", sans-serif;
+      font-size: 13px;
+      font-size: 0.8125rem;
+      font-style: normal;
+      line-height: 1.615384615;
+      margin-bottom: 0.538461538em }
+
+    .rssSummary:last-child {
+      margin-bottom: 2.1538461538em }
+
+    li:last-child :last-child {
+      margin-bottom: 0 }
+
+    @include breakpoint(medium up) {
+      .rssSummary:last-child {
+        margin-bottom: 1.615384615em }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group markup
+////
+@import 'util/util';
+
+[data-background-img] {
+	background-size: cover;
+	> img {
+		opacity: 0;
+	}
+}

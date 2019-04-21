@@ -1,0 +1,612 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group markup
+////
+@import 'util/util';
+
+@mixin sections {
+
+	.site-content {
+		max-width: 100vw;
+		overflow: hidden;
+		word-wrap: break-word;
+
+		h1:first-of-type {
+	    color: white }
+		
+		[role="contact"] legend,
+		[role="contact"] fieldset.row {
+			width: 100% }
+		
+		#primary {
+			> article {
+				height: inherit;
+				max-width: 100%;
+				padding-top: rem-calc(14);
+				padding-bottom: rem-calc(14);
+			} 
+		}
+
+		button[rel="ajax-load"],
+		.button[rel="ajax-load"] {
+			margin-bottom: auto;
+		}
+
+		.post-thumbnail {
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			height: 100%;
+			width: 100%;
+			background-position: center;
+
+			+ figcaption {
+				position: relative;
+				z-index: 1;
+			}
+
+			img:not(.knockout) {
+				display: block;
+			}
+		}
+
+		.post {
+			article {
+				height: inherit;
+
+				@include breakpoint(small only){
+      		.entry-content,
+      		.entry-title,
+      		.entry-summary,
+      		.icon-link.block {
+	      		@include mobile-constraints;
+	      	}
+				}
+
+			  @include breakpoint(large up){
+
+			  	figure[data-clickable]:hover {
+				  	.post-thumbnail {
+				  		opacity: 0.6;
+							transition: opacity 300ms ease-out;
+				  	}
+				  }
+			  }
+
+				.post-thumbnail {
+					opacity: 0.8;
+					height: inherit;
+					transition: opacity 300ms ease-out;
+
+				  img:not(.knockout) {
+				  	height: inherit;
+				  }
+
+				  + figcaption {
+						display: table-cell;
+						height: inherit;
+						vertical-align: middle;
+						text-align: center;
+						width: 100vw;
+					}
+				}
+
+				.post-background {
+					height: inherit;
+		    	text-align: center;
+				  background-color: #00194a;
+				  &.alert {
+				  	background-color: $alert-color;
+				  }
+				  &.blue {
+				  	background-color: $blue;
+				  }
+				  &.navy {
+				  	background-color: $navy;
+				  }
+				  &.orange-yellow {
+						background-color: #ba2804;
+					}
+					&.pink {
+						background-color: #dc3b97;
+					}
+					&.red-orange {
+						background-color: #f15b37;
+					}
+					&.violet-blue {
+						background-color: #36039c;
+					}
+					&.turquoise {
+						background-color: $turquoise;
+					}
+					&.white {
+						background-color: white;
+						h1, h2 {
+							color: $pink;
+						}
+
+						.entry-summary {
+							color: $space-gray;
+						}
+					}
+					a[rel="bookmark"] {
+						pointer-events: none;
+					}
+				}
+
+				.entry-title {
+					text-transform: none;
+			    color: $baby-blue;
+
+					&.orange-yellow {
+						color: #ffca91;
+					}
+					&.red-orange {
+						color: #f15b37;
+					}
+					&.violet-blue {
+						color: #868af1;
+					}
+					&.pink {
+						color: $pink;
+					}
+
+			    a {
+			    	color: inherit;
+			    }
+		    }
+
+				.entry-summary {
+					color: white;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(small only) {
+
+		.site-content {
+			h1:first-of-type {
+				@include mobile-constraints;
+				padding-left: rem-calc(15);
+				padding-right: rem-calc(15);
+			}
+
+	  	p + nav,
+	  	.entry-content + nav {
+	    	text-align: center;
+    	}
+		}
+        
+    aside.content-area {
+			#menu-secondary.menu {
+      	text-align: center;
+			}
+			&:not(#primary) {
+				padding-top: 0;
+		    padding-bottom: rem-calc(8);
+		  }
+    }
+    .content-area:not(#primary) {
+    	.row {
+				padding-left: rem-calc(10);
+    		padding-right: rem-calc(10);
+   			@include mobile_constraints;
+   		}
+   	}
+	}
+
+	@include breakpoint(medium down) {
+		$footer_height: rem-calc(34);
+
+		body:not(.single) #masthead + *:not(.off-canvas-wrapper),
+		body:not(.single) #masthead + .off-canvas-wrapper #primary {
+  		padding-top: rem-calc(130);
+  		padding-bottom: rem-calc(47);
+  	}
+
+		.site-content {
+			h1:first-of-type {
+				margin-top: rem-calc(6);
+				margin-bottom: auto;
+			}
+
+	  	p + nav,
+	  	.entry-content + nav {
+	    	margin-top: rem-calc(26);
+    	}
+
+			#primary {
+		    min-height: rem-calc(435);
+			}
+		}
+
+		.content-area:not(#primary) {
+	    padding:  rem-calc(42) 0 rem-calc(47) 0;
+	  }
+    
+  	aside.content-area {
+			#menu-secondary.menu {
+				& > li a {
+					padding-top: rem-calc(28);
+					padding-bottom: rem-calc(9);
+					white-space: nowrap;
+				}
+			}
+
+      figure[rel="logo"] {
+      	margin-top: rem-calc(28);
+      	margin-bottom: rem-calc(20);
+      	padding-left: 0;
+        text-align: center;
+      }
+		}
+		
+		.post{
+			&#primary {
+				min-height: initial;
+			  min-height: auto;
+				height: rem-calc(302);
+    		margin-top: 5.5rem;
+			}
+
+			article {
+				.entry-title {
+					margin-bottom: auto;
+				  font-size: rem-calc(41);
+  				line-height: 1;
+
+  				.fa {
+  					margin-top: rem-calc(11);
+  					margin-bottom: rem-calc(9);
+  				}
+  			}
+
+  			.entry-summary {
+  				font-size: rem-calc(21);
+  				font-family: $header-font-family-alt;
+  				font-weight: 500;
+  				line-height: 1.2;
+  				.fa-angle-double-right {
+  				  margin-left: rem-calc(6);
+				    font-size: rem-calc(16);
+				    margin-top: rem-calc(6);
+  				}
+  			}
+    	}
+		}
+
+		.post-thumbnail {
+	    max-width: none;
+	    height: rem-calc(483);
+			img:not(.knockout) {
+				width: auto;
+		    height: 100%;
+		    max-width: none;
+		  }
+    }
+  }
+
+  @include breakpoint(medium only) {
+		.site-content {
+			h1:first-of-type {
+				margin-left: rem-calc(25);
+				margin-right: rem-calc(25);
+			}
+		}
+   		.column, .columns {
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+			}
+
+		.content-area:not(#primary) {
+   		.row {
+   			margin-left: auto;
+   			margin-right: auto;
+   		}
+   	}
+
+		aside.content-area {
+			#menu-secondary.menu {
+				& > li a {
+					padding-right: 0.25rem;
+				}
+			}
+			&:not(#primary) {
+				padding-top: rem-calc(24);
+		    padding-bottom: rem-calc(24);
+		  }
+		}
+  }
+
+  @include breakpoint(large only) {
+		body:not(.single) #masthead + *:not(.off-canvas-wrapper),
+		body:not(.single) #masthead + .off-canvas-wrapper #primary {
+		  padding-top: rem-calc(108);
+		}
+	}
+	
+
+	@include breakpoint(large up) {
+
+		.site-content {
+			h1 {
+				margin-top: 1.25rem;
+			}
+		  p + nav,
+	  	.entry-content + nav {
+		    margin-top: 2.25rem;
+		  }
+
+			#primary {
+		  		min-height: 45.25rem;
+		  	}
+
+			.post {
+				.entry-title,
+				.entry-summary {
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				.entry-title {
+					max-width: 75%;
+					margin-top: rem-calc(62);
+					font-size: rem-calc(60);
+				}
+
+		    .fa + .entry-title {
+		    	margin-top: auto;
+		    }
+
+		    .entry-summary {
+				max-width: 41%;
+			    margin-top: rem-calc(-4);
+				font-family: $museo;
+		    	font-size:rem-calc(22);
+			    font-weight: 500;
+			    line-height: 1.2;
+
+			    .fa {
+				    margin-left: rem-calc(11);
+				    font-size: rem-calc(18);
+				    margin-top: rem-calc(5);
+				}
+		    }
+			}
+		}
+
+		.post-thumbnail {
+			max-width: inherit;
+			height: inherit;
+			img:not(.knockout) {
+				width: 100%;
+			}
+		}
+
+		.site-excerpt {
+	    font-size: 2.5rem;
+	    max-width: 60%;
+	    margin-top: 2.875rem;
+	    margin-left: auto;
+    	margin-right: auto;
+   	}
+
+		.content-area:not(#primary) {
+			padding: 3.75rem 1.25rem 3.625rem 1.25rem;
+  	}
+
+  	aside.content-area {
+			&:not(#primary) {
+				padding-top: rem-calc(32);
+		    padding-bottom: rem-calc(32);
+		  }
+
+			#menu-secondary.menu {
+				& > li a {
+					padding-top: rem-calc(36);
+					padding-right: rem-calc(23);
+					padding-bottom: rem-calc(9);
+				}
+			}
+
+      figure[rel="logo"] {
+        text-align: right;
+      }
+		}
+	}
+
+	@include breakpoint(xlarge up) {
+		body:not(.single) #masthead + *:not(.off-canvas-wrapper),
+		body:not(.single) #masthead + .off-canvas-wrapper #primary {
+  		padding-top: rem-calc(107);
+  	}
+  }
+
+	.site-excerpt {
+		color: white;
+    font-family: $header-font-family;
+    font-weight: 300;
+    line-height: 1.1;
+    a {
+    	color: inherit;
+    	text-decoration: underline;
+
+    	&:hover {
+    		color: $cobalt;
+    	}
+    }
+	}
+
+	.content-area {
+		&.orange,
+		&.periwinkle,
+		&.pink,
+		&.plum,
+		&.purple,
+		&.red,
+		&.turquoise {
+			.edit-post {
+				color: white;
+			}
+		}
+
+	  position: relative;
+  	> * {
+  		max-width: 61.25rem }
+
+		article,
+		div {
+			.entry-content,
+			nav {
+				:last-child {
+					margin-bottom: auto }
+			}
+		}
+
+		&.lavender, 
+		&.periwinkle,
+		&.pink,
+		&.plum,
+		&.purple,
+		&.red,
+		&.turquoise {
+			button, .button {
+				color: white;
+				&:hover {
+					color: white;
+					background-color: $global-hover-color;
+				}
+			} 
+		}
+		&.lavender, 
+		&.orange,
+		&.pink,
+		&.purple,
+		&.red,
+		&.turquoise {
+			color: white }
+		&.lavender {
+			background-color: $lavender;
+			p,
+			dd {
+				color: $light-purple;
+			}
+		}
+		&.orange {
+			background-color: $orange;
+			button, .button {
+				color: $lilac;
+				background-color: white; 
+				&:hover {
+					color: white;
+					background-color: $global-hover-color;
+				}
+			}
+			&.semi {
+				background-color: rgba($orange, 0.9) } 
+		} 
+		&.periwinkle {
+			background-color: $periwinkle;
+			&.semi {
+				background-color: rgba($periwinkle, 0.9) } } 
+		&.pink {
+			background-color: #861745;
+			button, .button {
+				background-color: $pink }
+			&.semi {
+				background-color: rgba(#861745, 0.9) } 
+		} 
+		&.plum {
+			background-color: $plum;
+			&.banner {
+				color: $mint }
+			&.semi,
+			&.space, 
+			&.semi.space {
+				background-color: rgba($plum, 0.9);
+			}
+		} 
+		&.purple {
+			background-color: $purple;
+			&.semi,
+			&.space,
+			&.semi.space {
+				background-color: rgba($purple, 0.9);
+			}
+		}
+
+		&.red {
+			background-color: $red;
+			&.semi {
+				background-color: rgba($red, 0.8);
+				&:before {
+					position: absolute;
+					top: 0;
+					content: '';
+					height: rem-calc(200);
+					width: 100%;
+					background: -moz-linear-gradient(top,  rgba($maroon,0.8) 0%, rgba($maroon,0) 100%);
+					background: -webkit-linear-gradient(top,  rgba($maroon,0.8) 0%,rgba($maroon,0) 100%);
+					background: linear-gradient(to bottom,  rgba($maroon,0.8) 0%,rgba($maroon,0) 100%);
+				}
+			} 
+		}
+		&.turquoise {
+			background-color: $turquoise;
+			&.semi {
+				background-color: rgba($turquoise, 0.8);
+				&:before {
+					position: absolute;
+					top: 0;
+					content: '';
+					height: 100%;
+					width: 100%;
+					/*Dev Note: Should this come out of there and be in the master breakpoint? */
+					@include breakpoint(small only) {
+						background: -moz-linear-gradient(top,  rgba($blue-green,0.8) 80%, rgba($blue-green,0.5) 100%);
+						background: -webkit-linear-gradient(top,  rgba($blue-green,0.8) 80%,rgba($blue-green,0.5) 100%);
+						background: linear-gradient(to bottom,  rgba($blue-green,0.8) 80%,rgba($blue-green,0.5) 100%);
+					}
+					/*Dev Note: same here?*/
+					@include breakpoint(medium) {
+						background: -moz-linear-gradient(top,  rgba($blue-green,0.8) 50%, rgba($blue-green,0.4) 100%);
+						background: -webkit-linear-gradient(top,  rgba($blue-green,0.8) 50%,rgba($blue-green,0.4) 100%);
+						background: linear-gradient(to bottom,  rgba($blue-green,0.8) 50%,rgba($blue-green,0.4) 100%);
+					}
+				}
+			}
+		}
+		&.white {
+			background-color: white;
+			h3 {
+				color: $pink;
+			}
+		}
+	}
+
+	aside.content-area {
+		&:not(#primary) {
+	    > div {
+	    	position: relative;
+	    	z-index: 1;
+	    }
+	  }
+
+		#menu-secondary.menu {
+			& > li {
+				display: inline-block;
+			}
+			& > li a {
+				color: white;
+				&:hover {
+					color: $global-hover-color;
+				}
+			}
+		}
+  }
+}

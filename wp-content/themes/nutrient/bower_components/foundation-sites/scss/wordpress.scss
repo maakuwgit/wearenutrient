@@ -1,0 +1,52 @@
+/**
+ * Nutrient for Wordpress
+ * Version 0.8
+ * Licensed under MIT Open Source
+ */
+
+// Sass utilities
+@import 'util/util';
+
+// Global variables and styles
+@import 'global';
+
+@import 'components/logos';
+@import 'components/avatar';
+@import 'components/backgrounds';
+@import 'components/footers';
+@import 'components/headers';
+@import 'components/fonts';
+@import 'components/content';
+@import 'components/tweet';
+@import 'util/animation';
+@import 'util/trace';
+@import 'util/transforms';
+@import 'components/shapes';
+@import 'components/widgets';
+
+@import 'page_templates/content-area';
+@import 'page_templates/page-template';
+@import 'page_templates/page-template-default';
+@import 'page_templates/blog';
+@import 'page_templates/single';
+@import 'page_templates/front-page';
+@import 'page_templates/home_w_video';
+@import 'page_templates/our-approach';
+@import 'page_templates/our-services';
+@import 'page_templates/our-team';
+
+@mixin wordpress {
+
+  // Structure
+  @include header;
+  @include footer;
+  @include sections;
+  @include content-area;
+
+  // Custom Elements
+  @include shape;
+  @include author;
+
+  //Modules
+  @include widgets;
+}

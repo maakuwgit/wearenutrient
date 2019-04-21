@@ -1,0 +1,31 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group markup
+////
+
+@mixin shape {
+  [id="widget-triangle"] {
+    top: 0;
+    z-index: 0;
+  }
+
+  @include breakpoint(medium down){
+  	[id="widget-triangle"] {
+  		left: 50%;
+  	  	margin-left: rem-calc(-320);
+    	width: rem-calc(640);
+    	svg { width: rem-calc(640); height: rem-calc(689); }
+  	}
+  }
+
+	@include breakpoint(large up) {
+	  [id="widget-triangle"] {
+	    left: rem-calc(-24);
+	    z-index: 0;
+	    width: rem-calc(513);
+	    svg { width: rem-calc(513); height: rem-calc(552); }
+	  }
+	}
+}

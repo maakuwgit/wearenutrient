@@ -1,0 +1,21 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group widgets
+////
+
+@mixin recent_entries {
+  .widget_recent_entries {
+    .post-date {
+      color: $text-gray;
+      display: block;
+      font-size: 13px;
+      font-size: 0.8125rem;
+      line-height: 1.615384615;
+      margin-bottom: 0.538461538em }
+
+    li:last-child .post-date {
+      margin-bottom: 0 }
+  }
+}

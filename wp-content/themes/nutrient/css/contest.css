@@ -1,0 +1,531 @@
+@font-face {
+  font-family: 'Gibson';
+  font-weight: 900;
+  font-style: normal;
+  src: url("../fonts/Gibson-Bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Gibson';
+  font-weight: 900;
+  font-style: italic;
+  src: url("../fonts/Gibson-BoldItalic.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Gibson';
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/Gibson-SemiBold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Gibson';
+  font-weight: 700;
+  font-style: italic;
+  src: url("../fonts/Gibson-SemiBoldItalic.otf") format("opentype"); }
+
+/* Overrides */
+h1,
+h2 {
+  font-family: "Gibson", "Avenir", "Helvetica Neue", Courier, serif;
+}
+
+h2 {
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
+}
+
+p, li {
+  font-weight: 500;
+}
+
+#contest_head {
+  border-bottom: solid 1px rgba(0,0,0,0.1);
+}
+
+.gibson {
+  font-family: "Gibson", "Avenir", "Helvetica Neue", Courier, serif;
+}
+
+.has-tip:focus {
+  outline: none;
+}
+
+.menu > li > a:focus {
+  color: #8589ed;
+}
+
+.menu > li > a.active, 
+.menu > li > a.active:hover, 
+.menu > li > a.active:focus {
+  color: #4145ae;
+}
+
+.content-area p,
+.content-area li {
+  font-family: MuseoSans;
+}
+  
+  .content-area.pink {
+    background-color: #de3e97;
+  }
+    .content-area.pink a,
+    .content-area.pink a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  .content-area.white {
+    color: black;
+  }
+
+
+.content-area ol {
+  list-style: none;
+  margin-top: 1rem;
+}
+  .content-area .num {
+    position: absolute;
+    display: block;
+    border-radius: 4rem;
+    font-family: Museo;
+    text-align: center;
+    color: white;
+    line-height: 1.6875;
+    background-color: black;
+  }
+
+  .content-area ol li {
+    position: relative;
+    margin-bottom: 1.375rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+#content #primary h1 {
+  max-width: 53.5rem;
+  font-weight: 900;
+  text-shadow: 0 0 1.125rem rgba(173,167,161,.5), 
+               0 0 3px rgba(0,0,0,0.3);
+}
+
+#content #primary h1,
+.entry-summary,
+#content #primary .site-excerpt {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.entry-summary,
+#content #primary .site-excerpt {
+  max-width: 48.125rem;
+  line-height: 1.375;
+  margin-top: 1.1875rem;
+  color: #6d6e71;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+#content #primary a[href="#welcome"] {
+  display: block;
+  color: #6d6e71;
+  margin-top: 1.5rem;
+}
+  #content #primary a[href="#welcome"]:focus,
+  #content #primary a[href="#welcome"]:hover {
+    color: #3a3a3a;
+  }
+
+#content #primary .fa-chevron-down {
+  font-size: 2.25rem;
+}
+
+.content-area:not(#primary) #vc_logo.row {
+  max-width: 60%;
+}
+
+#vc_logo {
+  margin: 1.5rem auto 2.3125rem auto;
+}
+
+.content-area.gold {
+  background-color: #f99d1f;
+  color: white;
+}
+
+.content-area.gold p {
+  text-align: center;
+}
+
+  #rules b, 
+  #rules strong {
+    font-weight: 900;
+  }
+
+#sequence_form div.wpcf7 {
+  max-width: 48.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sequence_form form,
+#sequence_form input {
+  min-height: initial;
+  position: relative;
+}
+
+#sequence_form form p {
+  font-weight: 900;
+}
+
+#sequence_form .wpcf7-form-control-wrap {
+  position: initial;
+}
+
+#sequence_form div.wpcf7-response-output {
+  margin: auto;
+  padding: 0;
+  font-size: 1.75rem;
+  font-weight: 900;
+  text-align: center;
+  font-family: MuseoSans;
+  max-width: 31.25rem;
+  border: none;
+}
+
+.wpcf7-validation-errors {
+  display: none !important;
+}
+
+#sequence_form span[role="alert"] {
+  position: absolute;
+  margin-top: -2rem;
+  width: 100%;
+  min-width: 420px;
+  float: none;
+  font-size: 1rem;
+  text-align: left;
+  font-weight: 700;
+}
+
+#sequence_form label,
+#sequence_form .wpcf7-list-item-label {
+  font-weight: 900;
+  text-align: left;
+  color: white;
+}
+
+#sequence_form .wpcf7-list-item-label {
+  display: inline-block;
+  margin-left: 1rem;
+  vertical-align: top;
+  margin-top: -24px;
+  float: left;
+  width: calc(100% - 4rem);
+}
+
+#sequence_form .wpcf7-form-control-wrap.use_label_element {
+  display: table;
+  vertical-align: top;
+}
+  #sequence_form input[type="email"],
+  #sequence_form input[type="tel"],
+  #sequence_form input[type="text"],
+  #sequence_form textarea {
+    border-color: white;
+    -webkit-appearance: none;
+    min-width: 5.25rem;
+    padding: 0.5rem 1rem;
+    font-family: MuseoSans;
+    font-weight: 500;
+    color: #818080;
+    line-height: 1.125;
+    background-color: white;
+  }
+
+  #sequence_form input[type="submit"],
+  #sequence_form input[type="button"] {
+    background-color: #311662;
+  }
+
+  #sequence_form label + br {
+    display: none;
+  }
+
+#secondary a,
+#secondary a:hover {
+  color: white;
+}
+
+/* Tooltip */
+.has-tip {
+  border: none;
+}
+  .has-tip:after {
+    content: '';
+    border-top: 0.125rem dotted black;
+    width: calc(100% - 1.25rem);
+    display: block;
+  }
+
+  .has-tip em {
+    border: solid 1px #de3e97;
+    position: relative;
+    vertical-align: 0.125rem;
+    display: inline-block;
+    cursor: help;
+    color: #de3e97;
+    font-size: 0.625rem;
+    border-radius: 10rem;
+    width: 0.875rem;
+    height: 0.875rem;
+    text-align: center;
+    line-height: 1.25;
+    margin-left: 0.25rem;
+  }
+
+*[role="tooltip"] {
+  font-size: 1rem;
+  min-width: 264px;
+  padding-right: 1.25rem;
+  background-color: black;
+}
+  *[role="tooltip"]:after {
+    position: absolute;
+    content:"\f00d";
+    font-family: FontAwesome;
+    line-height: 0.9375;
+    text-align: center;
+    height: 1rem;
+    width: 1rem;
+    top: 0.3125rem;
+    right: 0.3125rem;
+    color: white;
+  }
+ .tooltip.top:before {
+    border-top-color: black !important;
+  }
+  .tooltip.right:before {
+    border-right-color: black !important;
+  }
+
+/*Small Only / Small Down */
+@media screen and (max-width: 39.9375em) {
+  figure[rel="logo"],
+  .menu > li > a {
+    text-align: center; 
+  }
+
+  h2 {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  
+  #menu-primary li {
+    padding-top: 0.5rem;
+  }
+
+  #menu-primary li:nth-of-type(2),
+  #menu-primary li:nth-of-type(3){
+    display: none;
+  }
+
+  .content-area p + h2 {
+    margin-top: 2.5rem;
+  }
+  
+  #rules ol {
+    margin-left: auto;
+  }
+
+  .page-template .site-content h1:first-of-type {
+    font-size: 3.125rem;
+    line-height: 1.125;
+  }
+
+  #sequence_form p br {
+    display: none;
+  }
+  
+  #sequence_form span[role="alert"] {
+    margin-top: -1.75rem;
+    font-size: 0.75rem;
+  }
+  
+  #sequence_form input[type="email"],
+  #sequence_form input[type="tel"],
+  #sequence_form input[type="text"],
+  #sequence_form textarea {
+    margin-bottom: 2rem;
+  }
+  
+  #sequence_form label, #sequence_form .wpcf7-list-item-label {
+    margin-bottom: 0.5rem;
+  }
+
+  .content-area ol li {
+    margin-left: 0.875rem;
+  }
+  
+  .content-area .num {
+    margin-left: -2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+  }
+
+  #content #primary h1 {
+    margin-top: 7.375rem;
+    line-height: 0.75;
+    font-size: 13vw;
+  }
+
+  #vc_logo {
+    margin-bottom: 1rem;
+  }
+  
+  .tooltip:before {
+    border-bottom-color: black !important;
+  }
+}
+
+/* Medium Only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .entry-summary, 
+  #content #primary .site-excerpt {
+    max-width: 80%;
+  }
+}
+
+/* Medium Up */
+@media screen and (min-width: 40em) {
+  h2 {
+    font-size: 2.625rem;
+  }
+
+  h2, 
+  p {
+    margin-bottom: 1.75rem;
+  }
+
+  #site-navigation {
+    margin-right: auto;
+  }
+
+  .content-area p + h2 {
+    margin-top: 3.5rem;
+  }
+
+  .content-area p,
+  .content-area li {
+    font-size: 1.125rem;
+    line-height: 1.6875;
+  }
+  
+  #content #primary > article {
+    padding-bottom: 3.3125rem;
+  }
+
+  #content #primary h1 {
+    margin-top: 11.375rem;
+    font-size: 6.125rem;
+    line-height: 0.75;
+  }
+
+  #sequence_form h2 {
+    margin-top: 1.25rem;
+  }
+
+  #sequence_form label,
+  #sequence_form .wpcf7-list-item-label, 
+  #sequence_form input[type="email"],
+  #sequence_form input[type="tel"],
+  #sequence_form input[type="text"],
+  #sequence_form textarea {
+    font-size: 1.125rem;
+  }
+
+  #sequence_form label,
+  #sequence_form .wpcf7-list-item-label {
+    margin-bottom: 0.5rem;
+  }
+
+  #sequence_form input[type="email"],
+  #sequence_form input[type="tel"],
+  #sequence_form input[type="text"],
+  #sequence_form textarea {
+    margin-bottom: 2rem;
+  }
+
+  #sequence_form textarea {
+    height: 4rem;
+  }
+  
+  .content-area .num {
+    margin-left: -2.5rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 4rem;
+    font-size: 1rem;
+  }
+
+  #rules h2 {
+    margin-top: 0.6875rem;
+  }
+}
+
+/* Large Up */
+@media screen and (min-width: 64em) {
+  .site-header.fixed > div {
+    padding-top: 1.4375rem;
+    padding-bottom: 1.375rem;
+  }
+
+  .content-area:not(#primary) {
+    padding: 3.75rem 1.25rem 4.375rem 1.25rem;
+  }
+
+  #contest_head:not(.fixed) #site-navigation {
+    margin-top: 1.0625rem;
+  }
+
+  #menu-primary {
+    margin-top: 0.3125rem;
+  }
+
+  .entry-summary,
+  #content #primary .site-excerpt {
+    font-size: 1.625rem;
+  }
+
+  #rules div:nth-of-type(2) ol {
+    margin-left: 7.625rem;
+  }
+
+  #rules div:nth-of-type(3) ol {
+    max-width: 19.875rem;
+    margin-left: 3.75rem;
+  }
+}
+
+/* Medium Down */
+@media screen and (max-width: 63.9375em) {
+  h1 {
+    letter-spacing: -0.2px;
+  }
+  #masthead figure[rel="logo"] {
+    padding-left: 1.5rem;
+  }
+  #masthead nav[rel="mobile"] {
+    margin-top: 0.375rem;
+    padding-right: 1.125rem;
+  }
+}
+
+/* XLarge Up */
+@media screen and (min-width: 80em) {
+  .entry-summary, 
+  #content #primary .site-excerpt {
+    font-size: 1.3125rem;
+  }
+}

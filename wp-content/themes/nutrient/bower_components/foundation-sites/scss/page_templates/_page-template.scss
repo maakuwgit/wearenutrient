@@ -1,0 +1,57 @@
+// Wordpress Archive Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group templates
+////
+
+.page-template {
+	.edit-post:not(.button){
+		position: absolute;
+		z-index: 5;
+		margin-top: rem-calc(-5);
+		margin-left: rem-calc(10);
+	}
+
+	.site-content {
+		@include content-area;
+	}
+
+	p:last-of-type.site-excerpt {
+		margin-bottom: auto;
+	}
+
+	@include breakpoint(small only){
+		#primary {
+			h1,
+			.site-excerpt {
+				@include mobile_constraints;
+				padding-left: rem-calc(20);
+    		padding-right: rem-calc(20);
+			}
+		}
+	}
+
+	@include breakpoint(large up){
+		.edit-post:not(.button){
+			top: 33%;
+		}
+
+		#primary {
+			h1,
+			.site-excerpt {
+				position: relative;
+				z-index: 1;
+				max-width: rem-calc(980);
+		    margin-left: auto;
+		    margin-right: auto;
+		  }
+		}
+	}
+
+	@include breakpoint(xlarge up){
+		&.custom-background {
+			background-size: cover;
+		}
+  }
+}

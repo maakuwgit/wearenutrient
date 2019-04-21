@@ -1,0 +1,118 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group markup
+////
+
+// Global variables and styles
+@import 'global';
+
+body.trace {
+  > header {
+    background-color: rgba($white, 0.3);
+
+    nav[rel="mobile"] button,
+    nav[rel="mobile"] .button {
+    	background-color: rgba($blue, 0.3);
+    }
+  }
+
+	&.custom-background {
+    background-attachment: scroll;
+    background-size: 100% auto;
+    background-position: top center !important;
+    overflow: visible;
+    height: auto;
+  }
+
+	.content-area,
+	.content-area.semi {
+		&.purple,
+		&.pink,
+		&.plum,
+		&.orange,
+		&.turquoise,
+		&.white {
+	    background-image: none;
+	    &:before {
+	    	background-color: transparent !important;
+	    }
+	  }
+		&.purple {
+			background-color: rgba($purple, 0.2) }
+		&.pink {
+    	background-color: rgba($pink, 0.2) }
+		&.plum {
+    	background-color: rgba($plum, 0.2) }
+		&.orange {
+    	background-color: rgba($orange, 0.2) }
+		&.turquoise {
+    	background-color: rgba($turquoise, 0.2) }
+		&.white {
+    	background-color: rgba($white, 0.2) }
+	}
+
+	.post-thumbnail,
+	.thumbnail img {
+		opacity: 0 }
+
+	.content-area[rel="fresh_thinking"], 
+	.content-area[rel="our_approach"].banner,
+	&.blog .site-content .post article .post-thumbnail,
+	.content-area.red.semi:before, 
+	.content-area.turquoise.semi:before {
+		background: none }
+	
+	.content-area[rel="fresh_thinking"] .entry-content.absolute img,
+	.content-area[rel="our_approach"]:not(#primary):not(.banner),
+	svg[id="widget-triangle"] {
+		opacity: 0.5 }
+
+	.button.success, 
+	input[type="submit"].success {
+		background-color: rgba($success-color, 0.2);
+	}
+
+	button, 
+	button {
+		background-color: rgba($button-background, 0.2);
+	}
+
+	aside.content-area:not(#primary):before,
+	.thumbnail + figcaption.absolute, 
+	&.blog .site-content .post article .post-background,
+	&.single .site-content .post article .post-background, 
+	footer[role="credit"] {
+		background-color: transparent !important;
+	}
+	
+	section[rel="services"] .accordion-item .accordion-title a, 
+	&.single .site-content .post article .post-thumbnail, 
+	section[rel="users"] .thumbnail {
+		opacity: 0.2;
+	}
+	
+	@include breakpoint(small only){
+		.page-template-template-our_services .site-content #primary {
+			height: 750px;
+		}
+
+		section[rel="services"] {
+			margin-top: rem-calc(25);
+		}
+	}
+
+	@include breakpoint(large up){
+		section[rel="services"] {
+			margin-top: rem-calc(15);
+		}
+	}
+
+	section[rel="services"] {
+	  .background {
+			display: none;
+		}
+	}
+
+}

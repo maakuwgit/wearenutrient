@@ -1,0 +1,87 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group markup
+////
+
+#logo-main {
+	width: 100%;
+	max-width: rem-calc(175);
+	height: rem-calc(41);
+}
+
+@include breakpoint(medium down) {	
+	#logo-main { height: rem-calc(41) !important; width: 175px !important; }
+
+	#logo-footer {
+	  width: 9rem;
+	  height: rem-calc(34);
+	}
+
+	#secondary figcaption {
+		font-size: rem-calc(10);
+		margin-top: rem-calc(4);
+	}
+	
+	#masthead figcaption {
+		font-size: 0.8125rem;
+	}
+}
+
+@include breakpoint(large up) {
+	#secondary figcaption,
+	#masthead figcaption {
+		font-size: 0.8125rem;
+	  margin-top: 0.3125rem;
+  }
+	
+	#logo-footer {
+	  width: 10rem;
+	  margin-right: rem-calc(20);
+	  height: rem-calc(37);
+	}
+
+	#secondary figcaption {
+		font-size: rem-calc(11.5);
+		margin-right: 1rem;
+	}
+}
+
+#secondary figcaption,
+#masthead figcaption {
+	font-family: $avenir;
+  font-weight: bold;
+  color: $pink;
+  sup {
+  	top: -0.1rem }
+}
+
+#secondary figcaption {
+	color: white;
+}
+
+svg[id*="logo"] {
+	circle, 
+	path {
+		fill: #231e20 }
+
+	&.white {
+		circle, 
+		path {
+			fill: white }
+	}
+}
+
+@include breakpoint(large up){
+	#masthead.fixed {
+		#logo-main {
+		  width: auto;
+    	height: rem-calc(32);
+    }
+
+    figure[rel="logo"] figcaption {
+    	display: none;
+    }
+  }
+}

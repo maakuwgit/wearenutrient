@@ -1,0 +1,596 @@
+// Wordpress "Front Page" Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group templates
+////
+
+.home { 
+	.content-area {
+		@include breakpoint(small only){
+
+			&#primary {
+				min-height: rem-calc(672);
+
+				h1 {
+					font-size: rem-calc(40);
+					line-height: rem-calc(44);
+				}
+
+				hr {
+					margin-top: rem-calc(30);
+					margin-top: rem-calc(24);
+				}
+			}
+		
+			.site-excerpt {
+		      	@include mobile-constraints;
+		    		font-size: rem-calc(22);
+			    	text-align: center;
+			    	line-height: rem-calc(28);
+		    	}
+
+				&[rel="our_approach"]:not(#primary) {
+					p {
+	      				@include mobile-constraints;
+				    	line-height: rem-calc(26);
+					}
+				}
+
+			&[rel="our_approach"]:not(#primary).banner {
+				top: rem-calc(438);
+				width: 100%;
+				min-height: rem-calc(215);
+			    padding-top: rem-calc(20);
+	  			padding-bottom: rem-calc(22);
+
+				nav {
+					margin-top: 1.5rem;
+					text-align: center;
+				}
+
+				p {
+			    font-size: rem-calc(18);
+			    line-height: 1.25;
+			  }
+			}
+
+				&[rel="our_approach"]:not(#primary):not(.banner) {
+				padding-top: rem-calc(40);
+				padding-bottom: rem-calc(34);
+
+				article {
+      				@include mobile-constraints;
+      			}
+				
+				h2 {
+    			margin-right: rem-calc(10);
+					margin-left: rem-calc(10);
+				}
+
+				p {
+				  max-width: 93%;
+    			margin-left: 0;
+			    font-size: rem-calc(20);
+			    letter-spacing: 0.2px;
+			  }
+				
+				#our_approach-decision_tree, 
+				#our_approach-circles {
+					overflow: visible;
+			    margin-bottom: auto;
+			  }
+
+			  #our_approach-decision_tree {
+			  	top: rem-calc(0);
+			  	left: rem-calc(-100);
+			  }
+
+			  #our_approach-circles {
+			    right: rem-calc(141);
+			    top: rem-calc(-143);
+
+					#our_approach-midground-circles {
+						width: rem-calc(320);
+						height: auto;
+						max-width: none;
+						margin-left: 40%;
+				  }
+
+					#our_approach-foreground-circles {
+						max-width: none;
+						margin-top: rem-calc(665);
+						margin-left: rem-calc(92);
+						width: rem-calc(403);
+						height: rem-calc(403);
+				  }
+				}
+
+	    	[rel="hm_logo"] {
+
+	    		> :first-child {
+				    top: rem-calc(100);
+			    	right: -27.5%;
+			    	max-width: rem-calc(120);
+
+			    	img,
+			    	svg {
+			    	  width: rem-calc(140);
+				    }
+	    		}
+			  }
+			}
+
+			&[rel="fresh_thinking"] {
+				&:after {
+					content: '';
+					position: absolute;
+					top: rem-calc(30);
+			    left: 50%;
+			    right: 0;
+			    bottom: 0;
+			    margin-left: rem-calc(-190.25);
+					background-size: rem-calc(434) rem-calc(380.5);
+					background-image: url(#{$img-path}background-fresh_thinking-mobile.png);
+					background-repeat: no-repeat;
+				}
+
+				h2, h3 {
+					margin-left: rem-calc(10);
+					margin-right: rem-calc(10);
+					font-size: rem-calc(42);
+					font-weight: 300;
+				}
+
+			  &:not(#primary) {
+			  	padding-bottom: 2.25rem;
+					
+					article.row {
+	      		@include mobile-constraints;
+	      	}
+			  }
+				
+				figure {
+					div.absolute {
+						top: rem-calc(61);
+						left: rem-calc(-8);
+						width: rem-calc(520);
+					}
+
+			    figcaption {
+
+						p {
+	    				margin-bottom: rem-calc(25);
+							font-size: rem-calc(22);
+							line-height: 1.2;
+
+							small {
+								letter-spacing: -0.2px;
+								line-height: 1.2;
+							}
+
+							.huge {
+							  font-size: rem-calc(175);
+					    	line-height: 0.8125;
+					    }
+						}
+					}
+			  }
+
+				article > div:first-of-type {
+					padding-bottom: 0.625rem;
+				}
+
+			  nav {
+			  	margin-bottom: rem-calc(10);
+			  	text-align: center;
+			  }
+			}
+		}
+
+		@include breakpoint(medium only){
+			&#primary {
+				min-height: rem-calc(580);
+
+				h1 {
+					max-width: initial;
+			    	font-size: rem-calc(72);
+		    	}
+		  	}
+
+			&[rel="our_approach"]:not(#primary).banner {
+				top: rem-calc(768);
+				min-height: rem-calc(150);
+
+				p {
+					font-size: 1.375rem;
+	    		line-height: 1.5;
+	    		letter-spacing: -0.1px;
+		    }
+		  }
+
+			&[rel="our_approach"]:not(#primary):not(.banner) {
+				.entry-content {
+					.row.collapse {
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+
+				#our_approach-decision_tree, 
+				#our_approach-circles {
+					overflow: visible;
+			    margin-bottom: auto;
+			  }
+
+			  #our_approach-decision_tree {
+			  	top: rem-calc(200);
+			  	left: rem-calc(18);
+			  }
+
+			  #our_approach-circles {
+			    right: rem-calc(141);
+			    top: rem-calc(-143);
+
+					#our_approach-midground-circles {
+						width: rem-calc(326);
+						height: auto;
+				  }
+
+					#our_approach-foreground-circles {
+						max-width: none;
+						margin-top: rem-calc(500);
+						margin-left: rem-calc(60);
+						width: rem-calc(403);
+						height: rem-calc(403);
+				  }
+				}
+			}
+
+			&[rel="fresh_thinking"] {
+				overflow: hidden;
+
+				figure {
+
+					img {
+						min-width: rem-calc(585);
+					  margin-left: rem-calc(-66);
+			    	margin-top: rem-calc(-98);
+			    }
+
+			    figcaption {
+						p {
+							.huge {
+								margin-top: rem-calc(90);
+							  font-size: rem-calc(170);
+					    	line-height: 0.75;
+							}
+					  }
+					}
+				}
+
+				nav {
+					margin-top: rem-calc(125);
+				}
+			}
+		}
+
+		@include breakpoint(medium up){
+			&#primary {
+				.site-excerpt {
+					text-align: left;
+					font-family: $museo;
+					font-size: rem-calc(40);
+				}
+			}
+
+			&[rel="our_approach"]:not(#primary).banner {
+				width: 100%;
+
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					z-index: -1;
+					background-color: rgba(31, 9, 45, 0.4);
+				}
+
+				p {
+			    max-width: 41.25rem;
+				}
+			}
+
+			&[rel="our_approach"]:not(#primary):not(.banner) {
+				[rel="hm_logo"] {
+	    		> :first-child {
+				    svg {
+				    	width: rem-calc(205);
+				    }
+				  }
+		    }
+		  }
+		}
+
+		@include breakpoint(large only){
+
+		  &#primary {
+		  	h1,
+		  	.site-excerpt {
+		  		margin-left: rem-calc(125);
+		  	}
+		  	h1 {
+		  		max-width: rem-calc(840);
+		  		margin-right: auto;
+		  	}
+		  }
+		}
+
+		@include breakpoint(large up){
+
+		  &#primary {
+		  	h1 {
+		  		margin-top: rem-calc(20);
+			    font-size: rem-calc(78);
+			    text-align: left;
+			    line-height: 1.0625;
+			  }
+
+		  	hr {
+		  		margin-top: rem-calc(40);
+		  	}
+
+		  	.site-excerpt {
+		  		margin-top: rem-calc(35);
+					font-size: rem-calc(40);
+					letter-spacing: -0.4px;
+					line-height: 1.25;
+		  	}
+		  }
+			
+			&[rel="our_approach"]:not(#primary).banner {
+				top: rem-calc(768);
+				min-height: rem-calc(178);
+
+				.entry-content {
+    			margin-top: rem-calc(-7);
+			    padding-right: rem-calc(40);
+				  padding-left: rem-calc(11);
+				  &.medium-9 {
+			      width: 72.75%;
+			    }
+				}
+
+				nav {
+					margin-top: auto;
+			    padding-top: rem-calc(3);
+			    padding-left: 0;
+			    padding-right: 0;
+			    &.medium-3 {
+						width: 27.25%;
+					}
+				}
+
+				p {
+				  font-size: 1.375rem;
+		    	line-height: 1.5;
+		    	letter-spacing: -0.1px;
+				}
+			}
+
+			&[rel="our_approach"]:not(#primary):not(.banner) {
+				padding-top: 4.75rem;
+				padding-bottom: 5.375rem;
+
+				p {
+					font-size: rem-calc(20);
+	    		line-height: 2;
+					letter-spacing: -0.2px;
+	    	}
+				
+				#our_approach-decision_tree, 
+				#our_approach-circles {
+					overflow: visible;
+			    margin-bottom: auto;
+			  }
+
+			  #our_approach-decision_tree {
+			  	top: rem-calc(200);
+			  	left: rem-calc(18);
+			  }
+
+			  #our_approach-circles {
+			    right: rem-calc(141);
+			    top: rem-calc(-143);
+
+					#our_approach-midground-circles {
+						width: rem-calc(326);
+						height: auto;
+				  }
+
+					#our_approach-foreground-circles {
+						max-width: none;
+						margin-top: rem-calc(500);
+						margin-left: rem-calc(60);
+						width: rem-calc(403);
+						height: rem-calc(403);
+				  }
+				}
+	    	
+	    	[rel="hm_logo"] {
+	    		> :first-child {
+				    top: rem-calc(127);
+			    	right: rem-calc(65) }
+			  }
+			}
+
+			&[rel="fresh_thinking"] {
+
+				figure {
+					div.absolute.hide-for-small-only {
+				    top: rem-calc(-47);
+				    left: 50%;
+				    width: inherit;
+				    max-width: rem-calc(686);
+
+				    img {
+				    	max-width: none;
+				    	margin-left: rem-calc(-60);
+				    }
+				  }
+
+			    figcaption {
+						p {
+	    				margin-bottom: 1.125rem;
+							font-size: rem-calc(21);
+							line-height: 1.1;
+
+							small {
+								letter-spacing: 0.1px;
+								line-height: 1.3;
+							}
+
+							.huge {
+								margin-top: rem-calc(134);
+								font-size: rem-calc(226);
+				    		line-height: 0.6875;
+							}
+
+						}
+					}
+			  }
+				
+				article > div:first-of-type {
+					padding-top: 3rem;
+					padding-bottom: 9.125rem;
+				}
+
+			  nav {
+			  	margin-top: 6.3125rem;
+			  }
+			}
+		}
+
+		@include breakpoint(xlarge up){
+			&#primary {
+				h1,
+				.site-excerpt {
+					max-width: rem-calc(950);
+			    margin-left: auto;
+			    margin-right: auto;
+			  }
+			}
+	  }
+
+		&#primary {
+			h1 {
+		  	font-family: $body-font-family;
+			}
+		}
+
+		&[rel="our_approach"]:not(#primary).banner {
+			position: absolute;
+			opacity: 0.95;
+			background-color: rgba(55,34,101,0.9);
+
+			p {
+	  		font-family: $header-font-family-alt;
+		    font-weight: lighter;
+		  }
+		}
+
+		&[rel="our_approach"]:not(#primary):not(.banner) {
+			overflow: hidden;
+    	background-position: center center;
+    	background-repeat: no-repeat;
+
+			p {
+				font-weight: 300;
+				font-family: $header-font-family;
+			}
+
+    	[rel="hm_logo"] {
+    		position: relative;
+
+    		> :first-child {
+		    	img,
+		    	svg {
+			    	max-width: rem-calc(205);
+			    }
+    		}
+		  }
+
+		  #hm_dots12,
+		  #hm_dots3 {
+		  	transform-origin: center;
+		  }
+		  
+		  .our_approach-decision_tree {
+		  	width: rem-calc(126);
+		  	height: rem-calc(147);
+		  }
+		}
+
+		&[rel="fresh_thinking"] {
+			&:before {
+				content: '';
+		    position: absolute;
+		    z-index: 0;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    height: 100%;
+		    width: 100%;
+				background: -moz-linear-gradient(top, rgba(80,8,59,0.9) 0%, rgba(111,25,86,0) 20%, rgba(111,25,86,0) 80%, rgba(80,8,59,0.9) 100%);
+				background: -webkit-linear-gradient(top, rgba(80,8,59,0.9) 0%, rgba(111,25,86,0) 20%, rgba(111,25,86,0) 80%, rgba(80,8,59,0.9) 100%);
+				background: linear-gradient(to bottom, rgba(80,8,59,0.9) 0%, rgba(111,25,86,0) 20%, rgba(111,25,86,0) 80%, rgba(80,8,59,0.9) 100%);
+			}
+
+			figure {
+				div.absolute {
+			    z-index: 1;
+			    margin: auto;
+			    padding: 0;
+			  }
+
+		    figcaption {
+		    	z-index: 1;
+		    	position: relative;
+					text-align: left;
+
+					p {
+						max-width: rem-calc(340);
+						font-weight: 300;
+						font-family: $header-font-family-alt;
+
+						small {
+							display: block;
+							font-size: rem-calc(14);
+							font-family: $header-font-family;
+							font-weight: 100;
+							color: #fbc2e3;
+						}
+
+						.huge {
+							font-family: $museo;
+				    	white-space: nowrap;
+				    }
+
+						&:last-of-type {
+							margin-bottom: auto;
+						}
+					}
+				}
+			}
+				
+			article > div:first-of-type {
+			  z-index: 2;
+    		position: relative;
+    	}
+    }
+
+	}
+}

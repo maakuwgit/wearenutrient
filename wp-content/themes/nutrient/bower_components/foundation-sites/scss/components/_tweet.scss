@@ -1,0 +1,153 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group markup
+////
+
+// Global variables and styles
+@import 'global';
+
+.tweet {
+
+	&.content-area:not(#primary) {
+  	padding: rem-calc(16);
+  }
+
+  background-color: $turquoise;
+  color: white;
+
+  article {
+    vertical-align: middle;
+    display: table;
+    width: 100%;
+
+    > *,
+    > *.column:last-child:not(:first-child), 
+    > *.columns:last-child:not(:first-child) {
+      display: table-cell;
+    	vertical-align: middle;
+    	float: none;
+    }
+
+    figure {
+    	> div {
+    		border-right: solid 1px #0b7d69;
+    	}
+
+    	figcaption {
+    		.fa-twitter {
+    			font-size: rem-calc(45);
+  				text-align: center;
+  			}
+
+    		p {
+    		  margin-bottom: auto;
+			    font-size: rem-calc(22);
+			    font-weight: 300;
+
+			    small {
+			    	font-style: italic;
+			    	font-size: rem-calc(16);
+			    	line-height: 1;
+			    }
+			  }
+			}
+		}
+
+		> div {
+			p {
+		    font-family: $museo;
+			  font-size: rem-calc(20);
+		    margin-bottom: auto;
+		    margin-left: rem-calc(15);
+		  }
+    }
+  }
+
+  @include breakpoint(small only){
+  	article {
+	    figure {
+	    	figcaption {
+	    		p {
+		    		padding-right: rem-calc(20);
+		    		font-size: rem-calc(16);
+
+		    		small {
+		    			font-size: rem-calc(11);
+		    		}
+		    	}
+	    	}
+	    }
+	    > div {
+	    	p {
+	    	  font-size: 14px;
+	    		line-height: 1.25;
+	    	}
+	    }
+	  }
+  }
+
+  @include breakpoint(medium only){
+
+		&.content-area:not(#primary) {
+	    padding-left: 0;
+	    padding-right: 0;
+
+	    article {
+	    	figure {
+	    		> div.row {
+	    		  margin-left: 0;
+	    		  margin-right: rem-calc(20);
+	    		}
+
+	    		figcaption {
+	    			.fa-twitter {
+	    			  padding-left: 0;
+					    padding-right: 0;
+					    font-size: rem-calc(32);
+					    text-align: right;
+				    }
+
+				    p {
+					    padding-left: 0;
+  					  font-size: rem-calc(18);
+
+  					  small {
+  					  	font-size: rem-calc(12);
+  					  }
+  					}
+  				}
+	    	}
+	    	> div {
+	    		p {
+		    	  margin-left: auto;
+				    font-size: rem-calc(16);
+				    line-height: rem-calc(18);
+				  }
+	    	}
+	    }
+		}
+
+  }
+
+  @include breakpoint(large){
+  	article {
+	    figure {
+	    	figcaption {
+	    		.fa-twitter,
+	    		.fa-twitter.column {
+	    			padding-right: 0;
+				    margin-left: rem-calc(-4);
+	    		}
+
+	    		p,
+	    		p.column {
+	    			padding-left: 0 !important;
+	    		}
+	    	}
+	    }
+	  }
+  }
+
+}

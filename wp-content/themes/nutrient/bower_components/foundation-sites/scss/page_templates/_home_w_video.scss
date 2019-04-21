@@ -1,0 +1,323 @@
+// Wordpress Page Template "Homepage W/Video" Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group templates
+////
+
+.home .site-header.fixed { top: 0; }
+
+h1:first-of-type, p.site-excerpt { transition: none; -webkit-transition: none; }
+
+/*.scrollmagic-pin-spacer { min-height: 0px !important; } */
+.scroll-pin, 
+.site-header { transform: translate3d(0,0,0); -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+
+.page-template-template-home_w_video {
+	.site-content {
+		#primary {
+			background: url(#{$img-path}video-still.jpg) center top;
+			background-size: auto 100%; transform: translate3d(0,0,0); 
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			overflow: hidden;
+			#video-container {
+				position: absolute; z-index: 0; 
+				top: 0; left: 0; 
+				overflow: hidden; 
+				width: 100%; min-height: 100%; 
+				display: block;
+				img { height: 100vh; }
+			}
+			#thoughts { 
+				position: absolute; z-index: 0; top: calc(33vh - 350px); left: 0; width: 100%; min-height: 100%; 
+				.circles { 
+					margin-top: 18em;
+					position: relative;
+					.circle-0 { 
+						opacity: 0; position: absolute; left: 50%; margin-left: -160px; margin-top: -59px; 
+						.main-circle {}
+						.outer-circle { position: relative; z-index: 1; margin-left: -40px; }
+					}
+					.circle-2 { opacity: 0; position: absolute; left: 50%; margin-left: -101px; }
+					.circle-3 { opacity: 0; position: absolute; left: 50%; margin-left: -101px; }
+				}
+				.branches {
+					.path {
+						border-top: 2px solid #fff;
+						position: absolute;
+						top: 388px;
+						opacity: 0;
+						&.primary {
+							width: 24vw;
+						}
+						&.secondary {
+							width: 20vw;
+						}
+						&.tertiary {
+							width: 16vw;
+						}
+						.circle {
+							background: url(#{$img-path}circle4.png) 0 0 no-repeat;
+							height: 63px;
+							width: 63px;
+							position: absolute;
+							top: -31px;
+						}
+						.text {
+							font-size: 1.5rem;
+							width: 16vw;
+							position: absolute;
+							top: -12px;
+						}
+						&.left {
+							-ms-transform-origin: left top;
+							-moz-transform-origin: left top;
+							-webkit-transform-origin: left top;
+							transform-origin: left top;
+							top: 390px;
+							&.primary { right: calc(50% - 24vw); }
+							&.secondary { right: calc(50% - 20vw); }
+							&.tertiary { right: calc(50% - 16vw); }
+							.circle { right: -63px; }
+							&.secondary .circle,
+							&.tertiary .circle { background: #fff; height: 20px; width: 20px; top: -10px; right: -10px; border-radius: 10px; } 
+							.text { 
+								text-align: right;
+								-ms-transform-origin: right center;
+								-moz-transform-origin: right center;
+								-webkit-transform-origin: right center;
+								transform-origin: right center;
+								right: calc(-6vw); 
+							}
+							&.primary .text { right: calc(-6vw); }
+							&.secondary .text { right: calc(-3vw); top: -24px; }
+							&.tertiary .text { right: calc(-3vw); font-size: 1rem; }
+							.arc {
+								background: url(#{$img-path}arc.png) 0 0 no-repeat;
+								height: 248px; width: 248px;
+								top: -124px; right: 0;
+								position: absolute;
+								z-index: 0;
+								.top-text {
+									text-align: right;
+									-ms-transform-origin: right center;
+									-moz-transform-origin: right center;
+									-webkit-transform-origin: right center;
+									transform-origin: right center;
+									position: absolute; right: 4vw; bottom: -16px; 
+									width: 10vw;
+								}
+								.btm-text {
+									text-align: right;
+									-ms-transform-origin: right center;
+									-moz-transform-origin: right center;
+									-webkit-transform-origin: right center;
+									transform-origin: right center;
+									position: absolute; right: 0; top: 16px; 
+									width: 10vw;
+								}
+							}
+						}
+						&.right {
+							-ms-transform-origin: left top;
+							-moz-transform-origin: left top;
+							-webkit-transform-origin: left top;
+							transform-origin: left top;
+							left: 50%;
+							.circle { right: -63px; }
+							&.secondary .circle,
+							&.tertiary .circle { background: #fff; height: 20px; width: 20px; top: -10px; right: -10px; border-radius: 10px; }
+							.text { 
+								text-align: left;
+								-ms-transform-origin: left center;
+								-moz-transform-origin: left center;
+								-webkit-transform-origin: left center;
+								transform-origin: left center;
+							}
+							&.primary .text { left: calc(31vw); }
+							&.secondary .text { left: calc(22vw); }
+							&.tertiary .text { left: calc(18vw); font-size: 1rem; }
+							.arc {
+								background: url(#{$img-path}arc.png) 0 0 no-repeat;
+								height: 248px; width: 248px;
+								top: -124px; right: 0;
+								position: absolute;
+								z-index: 0;
+								.top-text { 
+									text-align: left;
+									-ms-transform-origin: left center;
+									-moz-transform-origin: left center;
+									-webkit-transform-origin: left center;
+									transform-origin: left center;
+									position: absolute; right: calc(-12vw); top: 16px; 
+									width: 12vw;
+								}
+								.btm-text { 
+									text-align: left;
+									-ms-transform-origin: left center;
+									-moz-transform-origin: left center;
+									-webkit-transform-origin: left center;
+									transform-origin: left center;
+									position: absolute; right: calc(-12vw); bottom: -16px;
+									width: 16vw; 
+								}
+							}
+						}
+					}
+				}
+			}
+			video { height: 100%; width: 100%; }
+			figcaption { position: relative; } 
+			h1, hr, .site-excerpt { text-align: center; position: relative; }
+			.site-excerpt.remove-transition { -webkit-transition: none !important; }
+		}
+
+		.content-area {
+			&[rel="our_approach"]:not(#primary).banner { 
+				&:before { background-color: transparent; }
+				position: relative !important; top: auto;
+				.scroll-indicator { 
+					position: absolute; top: -80px; right: 2em;
+					.dot { position: absolute; right: 9px; top: 28px; }
+				}
+			}
+		}
+
+    	@include breakpoint(small only){
+    		#primary {
+    			#thoughts {
+    				.circles {
+    					.circle-0 {
+    						.outer-circle { top: -36px; }
+    					}
+    				}
+    				.branches {
+    					.path {
+    						.circle {
+    							background-size: cover;
+    							height: 32px; width: 32px;
+    							top: -16px;
+    						}
+    						&.left {
+    							.circle {
+    								right: -32px;
+    							}
+    							&.primary {
+    								width: 22vw; right: calc(50% - 22vw);
+    								.text { right: calc(-10vw); font-size: 0.875rem; word-wrap: normal; width: 22vw; }
+    							}
+    							&.secondary {
+    								.circle { height: 15px; width: 15px; top: -7.5px; right: -7.5px; border-radius: 7.5px; }
+    								.text { right: calc(-5vw); width: 22vw; word-wrap: normal; font-size: 0.875rem; }
+    							}
+    							&.tertiary { 
+    								right: calc(50% - 22vw); width: 22vw; 
+    								.circle { height: 10px; width: 10px; top: -5px; right: -5px; border-radius: 5px; }
+    								.text { right: calc(-5vw); font-size: 0.875rem; word-wrap: normal; }
+    							}
+    							.arc {
+    								display: none;
+	    							background-size: cover;
+	    							height: 124px; width: 124px; top: -62px;
+	    							.top-text { right: calc(6vw); bottom: -32px; width: 24vw; }
+	    							.btm-text { right: calc(0vw); top: -32px; width: 24vw; }
+	    						}
+    						}
+    						&.right {
+    							.circle {
+    								right: -32px;
+    							}
+    							&.primary {
+    								width: 22vw; right: calc(50% - 22vw);
+    								.text { left: calc(34vw); font-size: 0.875rem; word-wrap: normal;}
+    							}
+    							&.secondary {
+    								.circle { height: 15px; width: 15px; top: -7.5px; right: -7.5px; border-radius: 7.5px; }
+    								.text { font-size: 0.875rem; width: 22vw; left: calc(24vw); word-wrap: normal; }
+    							}
+    							&.tertiary {
+    								width: 22vw;
+    								.circle { height: 10px; width: 10px; top: -5px; right: -5px; border-radius: 5px; }
+    								.text { left: calc(26vw); font-size: 0.875rem; word-wrap: normal; }
+    							}
+	    						.arc {
+    								display: none;
+	    							background-size: cover;
+	    							height: 124px; width: 124px; top: -62px;
+	    							.top-text { right: calc(-27vw); top: 0; width: 24vw; }
+	    							.btm-text { right: calc(-18vw); bottom: -32px; width: 24vw; }
+	    						}
+    						}
+    					}
+    				}
+    			}
+    		}
+
+    		.content-area {
+			}
+		}
+
+		@include breakpoint(medium up) {
+			#primary {
+				h1 { 
+					margin-left: auto !important; 
+					margin-right: auto !important; 
+				}
+				.site-excerpt { 
+					margin-left: auto !important; 
+					margin-right: auto !important; 
+				}
+			}
+		}
+
+		@include breakpoint(medium only) {
+			#primary {
+				#thoughts {
+					.branches {
+						.path {
+							&.left {
+								&.primary .text { right: calc(-10vw); }
+								&.secondary .text { width: 24vw; }
+								.arc {
+									.top-text { width: 15vw; }
+									.btm-text { width: 15vw; }
+								}
+							}
+							&.right {
+								&.primary .text { left: calc(34vw); }
+								&.secondary .text { left: calc(24vw); width: calc(24vw); }
+								&.tertiary .text { left: calc(20vw); width: calc(20vw); }
+								.arc {
+									.top-text { width: 15vw; right: calc(-15vw); }
+									.btm-text { width: 18vw; bottom: calc(-5vw); right: calc(-10vw); }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@include breakpoint(medium down) {
+			#primary { min-height: calc(100vh); }
+		}
+
+		@include breakpoint(large up){
+			#primary { min-height: calc(100vh); }
+		}
+
+		@include breakpoint(large only) {
+			#primary {
+				h1 { font-size: 4.5rem; }
+			}
+		}
+
+		@include breakpoint(xlarge only) {
+			.circles { margin-top: 16em !important; }
+		}
+		@include breakpoint(xxlarge up) {
+			.circles { margin-top: 15em !important; }
+		}
+	}
+}

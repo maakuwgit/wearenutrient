@@ -1,0 +1,277 @@
+// Wordpress Archive Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group templates
+////
+
+.page-template-default:not(.home) {
+	@include content-area;
+	
+	&.admin-bar {
+		.site-content {
+			section[rel="the_content"]:not(#primary) {
+				padding-top: 0;
+			}
+		}
+	}
+
+	p:last-of-type.site-excerpt {
+		margin-bottom: auto;
+	}
+
+	.site-content {
+		.content-area[rel="the_content"]{
+			min-height: 25vh;
+		}
+
+		section.content-area:not(#primary){
+			&[rel="edit"] {
+			 	padding-bottom: 0;
+			}
+		}
+
+	  .post {
+	  	.entry-content {
+	    	p {
+			    font-family: $museo;
+			    font-weight: 300;
+			    color: $light-purple;
+
+			    &:last-of-type {
+			    	margin-bottom: auto;
+			    }
+			  }
+    	}
+    }
+	}
+
+	@include breakpoint(small only){
+		.site-content {
+			section.content-area:not(#primary) {
+				&:not([rel="contact"]) {
+				}
+
+				&[rel="edit"] {
+				 	padding-top: rem-calc(35);
+				}
+			}
+
+			.entry-summary {
+				font-family: $museo;
+			}
+
+			.content-area:not(#primary) {
+				[rel="the_content"] {
+				  padding-bottom: rem-calc(26);
+			    font-size: rem-calc(21);
+			    line-height: 1.2;
+		    }
+
+		    &[role="page-edit-navigation"] {
+					button,
+					.button {
+						width: 100%;
+					}
+
+					.edit-post {
+						display: none;
+					}
+				}
+		  }
+
+			#primary {
+				article {
+					min-height: rem-calc(305);
+				}
+
+				h1,
+				p {
+					margin-left: 0.25rem;
+					margin-right: 0.25rem;
+				}
+
+				.entry-summary,
+				.entry-summary + .icon-link {
+				  margin-bottom: 0.5rem;
+				}
+
+				.entry-summary {
+					+ .icon-link {
+		    		font-size: rem-calc(15);
+		    		letter-spacing: -0.1px;
+
+		    		.fa {
+		    		  font-size: rem-calc(12);
+					    margin-top: rem-calc(-3);
+			    	}
+			    }
+			  }
+
+				.entry-title {
+					.fa {
+						margin-top: rem-calc(4);
+					}
+				}
+			}
+
+			.post {
+				&:not([rel="the_content"]){
+					article {
+						height: rem-calc(305);
+
+						.entry-title .fa {
+							margin-bottom: rem-calc(4);
+						}
+					}
+				}
+
+				.entry-content {
+		    	p {
+				    font-size: rem-calc(21);
+				    line-height: 1.2;
+
+				    img[class*="float"] {
+					    float: none !important;
+					    width: 100%;
+					    margin-top: rem-calc(16);
+				    }
+				  }
+    		}
+    	}
+		}
+	}
+
+	@include breakpoint(large up){
+		.site-content {
+			section.content-area:not(#primary) {
+				&:not([rel="contact"]) {
+				  padding-left: rem-calc(194);
+				  padding-right: rem-calc(194);
+				}
+
+				&[rel="edit"] {
+				 	padding-top: rem-calc(31);
+				}
+
+				&[rel="download-bottom"] {
+				 	padding-bottom: rem-calc(63);
+				}
+			}
+
+			#primary {
+				height: rem-calc(350);
+				min-height: initial;
+		    min-height: auto;
+
+				.site-excerpt {
+					margin-top: rem-calc(15);
+			    font-size: rem-calc(21);
+			    letter-spacing: -0.1px;
+		    }
+
+		    .entry-summary {
+
+		    	+ .icon-link {
+		    		margin-top: rem-calc(16);
+		    		font-size: rem-calc(17);
+		    		letter-spacing: -0.2px;
+
+		    		.fa {
+	    		    font-size: rem-calc(16);
+					    height: rem-calc(20);
+			    	}
+		    	}
+		    }
+
+		    .entry-title {
+		    	&.has-icon {
+		    		margin-top: auto;
+		    		.fa {
+		    			margin-top: auto;
+		    		}
+		    	}
+		    }
+
+		  }
+
+			.post {
+
+				&:nth-of-type(n+2){
+					height: rem-calc(350);
+				}
+
+				&[rel="the_content"] {
+					height: auto;
+
+					&:not(#primary) {
+						padding-top: rem-calc(30);
+						padding-bottom: rem-calc(35);
+					}
+
+					.entry-content {
+						margin-bottom: rem-calc(25);
+					}
+				}
+
+				.entry-title {
+
+					&.has-icon {
+						margin-top: rem-calc(46);
+					}
+
+					.fa {
+					  font-size: rem-calc(53);
+    				margin-top: rem-calc(-52);
+    				margin-bottom: rem-calc(-4);
+    			}
+		    }
+
+		    .entry-summary {
+		    	margin-top: rem-calc(-8);
+		    }
+
+		    .entry-content {
+		    	p {
+		    		max-width: rem-calc(780);
+		    		margin-bottom: rem-calc(32);
+				    font-size: rem-calc(20);
+				    line-height: 1.6;
+
+				    img.float-left {
+				    	margin-right: rem-calc(50);
+				    }
+
+				    img.float-right {
+				    	margin-left: rem-calc(50);
+				    }
+
+				    img[class*="float"] {
+					    margin-top: rem-calc(38);
+					    margin-bottom: rem-calc(70);
+				    }
+				  }
+    		}
+			}
+
+			.button.edit-post {
+				margin-bottom: rem-calc(32);
+			}
+		}
+	}
+
+	@include breakpoint(xlarge up){
+		&.custom-background {
+			background-size: cover;
+		}
+
+		#primary {
+			h1,
+			.site-excerpt {
+				max-width: rem-calc(950);
+		    margin-left: auto;
+		    margin-right: auto;
+		  }
+		}
+  }
+}

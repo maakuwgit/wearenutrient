@@ -1,0 +1,213 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group widgets
+////
+
+.widget .wpcf7 {
+
+  .wpcf7-form {
+
+    label {
+      $padding: rem-calc(26);
+      font-size: rem-calc(16);
+      font-family: $museo;
+      font-weight: 500;
+      position: absolute;
+      height: 2.75rem;
+      padding: 0.61875rem;
+      line-height: normal;
+      margin: 0 0 1.125rem;
+      opacity: 0;
+      border: 2px solid transparent;
+      width: calc(100% - #{$padding});
+
+      &.over {
+        opacity: 0.5;
+        z-index: 1;
+      }
+    }
+
+    textarea {
+      resize: none;
+    }
+    
+    &.sent {
+      fieldset,
+      nav {
+        display: none !important;
+      }
+    }
+
+    .wpcf7-recaptcha {
+      margin-bottom: 1rem;
+    }
+  }
+
+  img.ajax-loader {
+    display: none !important;
+  }
+
+  .wpcf7-response-output {
+    h5 {
+      margin-top: rem-calc(-48);
+    }
+
+    &:not(.wpcf7-mail-sent-ok) {
+      display: none !important;
+    }
+    
+    &.wpcf7-mail-sent-ok {
+      vertical-align: middle;
+      height: rem-calc(269);
+      margin: 0;
+      padding: 0;
+      border: none;
+      font-size: rem-calc(18);
+      font-style: italic;
+      font-weight: 300;
+      font-family: $museo;
+
+      blockquote {
+        position: relative;
+        width: rem-calc(270);
+        margin-bottom: rem-calc(5);
+        border-color: #27105a;
+        background-color: $purple;
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-style: solid;
+        }
+
+        &:nth-of-type(even){
+          width: rem-calc(180);
+          padding-top: rem-calc(15);
+          padding-bottom: rem-calc(15);
+        }
+
+        &:nth-of-type(odd):before {
+          bottom: rem-calc(-49);
+          right: rem-calc(49);
+          border-width: 0 rem-calc(49) rem-calc(49) 0;
+          border-color: transparent #27105a transparent transparent;
+        }
+
+        &:nth-of-type(odd):after {
+          bottom: rem-calc(-38);
+          right: rem-calc(54);
+          border-width: 0 rem-calc(38) rem-calc(38) 0;
+          border-color: transparent $purple transparent transparent;
+        }
+
+        &:nth-of-type(even):before {
+          bottom: rem-calc(-20);
+          left: rem-calc(35);
+          border-width: rem-calc(20) rem-calc(35) 0 0;
+          border-color: #27105a transparent transparent transparent;
+        }
+
+        &:nth-of-type(even):after {
+          bottom: rem-calc(-13);
+          left: rem-calc(39);
+          border-width: rem-calc(14) rem-calc(22) 0 0;
+          border-color: $purple transparent transparent transparent;
+        }
+
+        p:not(.big) {
+          color: white;
+        }
+        
+        p:last-of-type {
+          margin-bottom: auto;
+        }
+      }
+    }
+  }
+
+  input + * {
+    height: 0;
+    opacity: 0;
+  }
+
+  .wpcf7-not-valid {
+    border-color: #f15b37;
+    transition: all 300ms ease-in-out;
+    -webkkit-transition: all 300ms ease-in-out;
+  }
+
+  span.wpcf7-not-valid-tip {
+    display: block;
+    opacity: 1;
+    height: rem-calc(19);
+    margin-top: -0.75rem;
+    margin-bottom: 1.125rem;
+    margin-left: rem-calc(8);
+    font-family: $museo;
+    font-size: rem-calc(16);
+    font-style: italic;
+    color: #f15b37;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    transition-delay: 300ms;
+    -webkit-transition-delay: 300ms;
+  }
+}
+
+@include breakpoint(small only) {
+
+  .content-area:not(#primary) {
+    .widget .wpcf7 {
+      fieldset.row,
+      nav.row {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      nav.row {
+        input[type="submit"],
+        input[type="button"] {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(landscape) {
+  .wpcf7-form {
+    min-height: rem-calc(317);
+  }
+}
+
+@include breakpoint(portrait) {
+  .wpcf7-form {
+    min-height: rem-calc(288);
+  }
+}
+
+@include breakpoint(medium down) {
+  .content-area:not(#primary) {
+    .widget .wpcf7 {
+      fieldset.row,
+      nav.row {
+        .column,
+        .column {
+          float: none;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(large up) {
+  .wpcf7-form {
+    min-height: rem-calc(317);
+  }
+}

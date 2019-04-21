@@ -1,0 +1,59 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group markup
+////
+
+@mixin author {
+
+	.author-info {
+		border-color: inherit;
+		border-style: solid;
+		border-width: 1px 0 1px 0;
+		clear: both;
+		padding-top: 1.75em;
+		padding-bottom: 1.75em }
+
+	.author-avatar {
+		.avatar {
+			float: left;
+			height: 42px;
+			margin: 0 1.75em 1.75em 0;
+			width: 42px }
+	}
+
+	.author-description {
+		> :last-child {
+			margin-bottom: 0 }
+	}
+
+	.author-title {
+		clear: none;
+		font-size: 16px;
+		font-size: 1rem;
+		font-weight: 900;
+		line-height: 1.75;
+		margin: 0 }
+
+	.author-bio {
+		color: #686868;
+		font-size: 13px;
+		font-size: 0.8125rem;
+		line-height: 1.6153846154;
+		margin-bottom: 1.6153846154em;
+		overflow: hidden }
+
+	.author-link {
+		white-space: nowrap }
+
+	.people div {
+    padding: 8px;
+    background: linear-gradient(to left, $orange 0%, $pink 100%);
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    overflow: hidden;
+    margin: auto
+	}
+}

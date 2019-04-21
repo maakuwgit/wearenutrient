@@ -1,0 +1,131 @@
+// Wordpress Archive Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group templates
+////
+
+.blog {
+	&.single {
+		.site-content {
+			#primary {
+				height: 0;
+				min-height: initial;
+				min-height: auto;
+				transition: height 300ms ease-out;
+				-webkit-transition: height 300ms ease-out;
+			}
+		}
+	}
+
+	.site-content {
+		@include content-area;
+
+		#primary {
+			overflow: hidden;
+
+	    .fa {
+	    	display: none;
+	    }
+	  }
+
+		section[class*="post-"] {
+
+	    .entry-summary {
+
+				+ .icon-link {
+	    		font-family: $header-font-family-alt;
+	    		font-weight: 700;
+	    		text-transform: uppercase;
+	    		color: $blue;
+
+	    		.fa {
+				    vertical-align: middle;
+		    		
+		    		&.fa-angle-double-left {
+		    			margin-right: rem-calc(6);
+		    		}
+		    	}
+	    	}
+		  }
+	  }
+	}
+
+	@include breakpoint(small only){
+		.site-content {
+			.site-excerpt {
+				@include mobile_constraints;
+				padding-left: rem-calc(20);
+				padding-right: rem-calc(20);
+	    }
+		
+		}
+	}
+
+	@include breakpoint(medium down){
+		.site-content {
+			
+			.post {
+				height: rem-calc(305);
+
+				article {
+					.post-thumbnail {
+    				width: calc(100% + 0.9375rem);
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint(large only){
+		.site-content {
+			#primary {
+				.site-excerpt {
+		    	max-width: initial;
+		    }
+		  }
+		}
+	}
+
+	@include breakpoint(large up){
+		.site-content {
+			#primary {
+				min-height: initial;
+		    min-height: auto;
+		    padding-bottom: 1rem;
+
+				.site-excerpt {
+					margin-top: rem-calc(15);
+			    font-size: rem-calc(21);
+			    letter-spacing: -0.1px;
+		    }
+		  }
+
+			.post {
+				height: rem-calc(350);
+
+				.entry-title {
+					
+					.fa {
+					  font-size: rem-calc(50);
+    				margin-top: rem-calc(-65);
+    			}
+		    }
+			}
+		}
+	}
+
+	@include breakpoint(xlarge up){
+		#primary {
+			h1,
+			.site-excerpt {
+				max-width: rem-calc(950);
+		    margin-left: auto;
+		    margin-right: auto;
+		  }
+		}
+		&.custom-background {
+			background-size: cover;
+		}
+  }
+}

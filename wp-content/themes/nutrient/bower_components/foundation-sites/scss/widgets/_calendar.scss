@@ -1,0 +1,41 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group widgets
+////
+
+@mixin calendar {
+  .widget_calendar {
+    table {
+      margin: 0 }
+
+    td,
+    th {
+      line-height: 2.5625;
+      padding: 0;
+      text-align: center }
+
+    caption {
+      font-weight: 900;
+      margin-bottom: 1.75em }
+
+    tbody a {
+      background-color: #007acc;
+      color: $white;
+      display: block;
+      font-weight: 700 }
+
+    tbody a:hover,
+    tbody a:focus {
+      background-color: $text-gray;
+      color: $white }
+
+    @include breakpoint(medium-up) {
+      td,
+      th {
+        line-height: 2.6923076923;
+        padding: 0 }
+    }
+  }
+}

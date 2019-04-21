@@ -1,0 +1,222 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group markup
+////
+
+//Blogger Sans
+@font-face {
+	font-family: 'BloggerSans';
+	font-weight: 300;
+	font-style: normal;
+	src: url("../fonts/BloggerSans.otf") format("opentype");
+}
+@font-face {
+	font-family: 'BloggerSans';
+	font-weight: 300;
+	font-style: italic;
+	src: url("../fonts/BloggerSans-Italic.otf") format("opentype");
+}
+@font-face {
+	font-family: 'BloggerSans';
+	font-weight: 100;
+	font-weight: lighter;
+	font-style: normal;
+	src: url("../fonts/BloggerSans-Light.otf") format("opentype");
+}
+@font-face {
+	font-family: 'BloggerSans';
+	font-weight: 100;
+	font-weight: lighter;
+	font-style: italic;
+	src: url("../fonts/BloggerSans-LightItalic.otf") format("opentype");
+}
+@font-face {
+	font-family: 'BloggerSans';
+	font-weight: 400;
+	font-style: normal;
+	src: url("../fonts/BloggerSans-Medium.otf") format("opentype");
+}
+@font-face {
+	font-family: 'BloggerSans';
+	font-weight: 400;
+	font-style: italic;
+	src: url("../fonts/BloggerSans-MediumItalic.otf") format("opentype");
+}
+@font-face {
+	font-family: 'BloggerSans';
+	font-weight: bold;
+	font-weight: 500, 600, 700;
+	font-style: normal;
+	src: url("../fonts/BloggerSans-Bold.otf") format("opentype");
+}
+@font-face {
+	font-family: 'BloggerSans';
+	font-weight: bold;
+	font-weight: 500, 600, 700;
+	font-style: italic;
+	src: url("../fonts/BloggerSans-BoldItalic.otf") format("opentype");
+}
+.bloggersans {
+	font-family: $body-font-family }
+
+//Museo
+@font-face {
+	font-family: 'Museo';
+	font-weight: normal;
+	font-weight: 300;
+	font-style: normal;
+	src: url("../fonts/Museo-300.otf") format("opentype");
+}
+@font-face {
+	font-family: 'Museo';
+	font-weight: normal;
+	font-weight: 300;
+	font-style: italic;
+	src: url("../fonts/Museo-300Italic.otf") format("opentype");
+}
+@font-face {
+	font-family: 'Museo';
+	font-weight: lighter;
+	font-weight: 100;
+	font-style: normal;
+	src: url("../fonts/Museo-100.otf") format("opentype");
+}
+@font-face {
+	font-family: 'Museo';
+	font-weight: lighter;
+	font-weight: 100;
+	font-style: italic;
+	src: url("../fonts/Museo-100Italic.otf") format("opentype");
+}
+@font-face {
+	font-family: 'Museo';
+	font-weight: 500;
+	font-style: normal;
+	src: url("../fonts/Museo-500.otf") format("opentype");
+}
+@font-face {
+	font-family: 'Museo';
+	font-weight: 500;
+	font-style: italic;
+	src: url("../fonts/Museo-500Italic.otf") format("opentype");
+}
+@font-face {
+	font-family: 'Museo';
+	font-weight: bold;
+	font-weight: 700;
+	font-style: normal;
+	src: url("../fonts/Museo-700.otf") format("opentype");
+}
+@font-face {
+	font-family: 'Museo';
+	font-weight: bold;
+	font-weight: 700;
+	font-style: italic;
+	src: url("../fonts/Museo-700Italic.otf") format("opentype");
+}
+@font-face {
+	font-family: 'Museo';
+	font-weight: bolder;
+	font-weight: 900;
+	font-style: normal;
+	src: url("../fonts/Museo-900.otf") format("opentype");
+}
+@font-face {
+	font-family: 'Museo';
+	font-weight: bolder;
+	font-weight: 900;
+	font-style: italic;
+	src: url("../fonts/Museo-900Italic.otf") format("opentype");
+}
+.museo {
+	font-family: $header-font-family }
+
+//MuseoSans
+@font-face {
+	font-family: 'MuseoSans';
+	font-weight: normal;
+	font-weight: 300;
+	font-style: normal;
+	src: url("../fonts/MuseoSans-300.otf") format("opentype");
+}
+@font-face {
+	font-family: 'MuseoSans';
+	font-weight: normal;
+	font-weight: 300;
+	font-style: italic;
+	src: url("../fonts/MuseoSans-300Italic.otf") format("opentype");
+}
+@font-face {
+	font-family: 'MuseoSans';
+	font-weight: 100, lighter;
+	font-style: normal;
+	src: url("../fonts/MuseoSans-100.otf") format("opentype");
+}
+@font-face {
+	font-family: 'MuseoSans';
+	font-weight: 100, lighter;
+	font-style: italic;
+	src: url("../fonts/MuseoSans-100Italic.otf") format("opentype");
+}
+@font-face {
+	font-family: 'MuseoSans';
+	font-weight: 500;
+	font-style: normal;
+	src: url("../fonts/MuseoSans-500.otf") format("opentype");
+}
+@font-face {
+	font-family: 'MuseoSans';
+	font-weight: 500;
+	font-style: italic;
+	src: url("../fonts/MuseoSans-500Italic.otf") format("opentype");
+}
+@font-face {
+	font-family: 'MuseoSans';
+	font-weight: bold;
+	font-weight: 700;
+	font-style: normal;
+	src: url("../fonts/MuseoSans-700.otf") format("opentype");
+}
+@font-face {
+	font-family: 'MuseoSans';
+	font-weight: bold;
+	font-weight: 700;
+	font-style: italic;
+	src: url("../fonts/MuseoSans-700Italic.otf") format("opentype");
+}
+@font-face {
+	font-family: 'MuseoSans';
+	font-weight: bolder;
+	font-weight: 900;
+	font-style: normal;
+	src: url("../fonts/MuseoSans-900.otf") format("opentype");
+}
+@font-face {
+	font-family: 'MuseoSans';
+	font-weight: bolder;
+	font-weight: 900;
+	font-style: italic;
+	src: url("../fonts/MuseoSans-900Italic.otf") format("opentype");
+}
+.museosans {
+	font-family: $header-font-family-alt }
+
+//Avenir
+@font-face {
+	font-family: 'Avenir';
+	font-weight: bolder;
+	font-weight: 900;
+	font-style: normal;
+	src: url("../fonts/AvenirLTStd-Black.otf") format("opentype");
+}
+@font-face {
+	font-family: 'Avenir';
+	font-weight: bolder;
+	font-weight: 900;
+	font-style: italic;
+	src: url("../fonts/AvenirLTStd-BlackOblique.otf") format("opentype");
+}
+.avenir {
+	font-family: $avenir }

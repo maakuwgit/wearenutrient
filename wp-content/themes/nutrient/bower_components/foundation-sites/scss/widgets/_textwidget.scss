@@ -1,0 +1,70 @@
+// Wordpress Template Nutrient
+// Licensed under MIT Open Source
+
+////
+/// @group widgets
+////
+
+.textwidget,
+.widget_text {
+  > :last-child {
+    margin-bottom: 0 }
+
+	a:not([href^="tel"]):hover,
+	a:not([href^="tel"]):active {
+		color: $cobalt;
+	}
+
+	a[href^="tel"],
+	a[href^="mailto"], 
+	address {
+		color: white;
+		font-family: $museo;
+		font-style: normal;
+    font-size: rem-calc(16);
+    font-weight: 100;
+    line-height: 1.125rem;
+	}
+
+	a[href^="tel"],
+	a[href^="mailto"] {
+		display: block;
+	}
+
+	.widget_text {
+		> p:last-of-type {
+			margin-bottom: rem-calc(31);
+		}
+	}
+
+	@include breakpoint(medium up){
+		a[href^="tel"] {
+			cursor: default;
+			text-decoration: none;
+		}
+
+	  a:not([href*="tel:"]),
+	  a:not([href*="tel:"]):hover,
+	  a:not([href*="tel:"]):focus {
+	  	text-decoration: underline;
+	  }
+	}
+
+	@include breakpoint(small only){
+		a[href^="mailto"],
+		a[href^="mailto"]:hover,
+		a[href^="tel"],
+		a[href^="tel"]:hover {
+			text-decoration: underline;
+		}
+
+		a[href^="mailto"],
+		a[href^="tel"] {
+			margin-top: rem-calc(16);
+		}
+
+		a[href^="tel"]:hover {
+			color: $cobalt;
+		}
+	}
+}

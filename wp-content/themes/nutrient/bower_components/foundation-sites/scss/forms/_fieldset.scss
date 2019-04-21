@@ -1,0 +1,77 @@
+// Foundation for Sites by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+////
+/// @group forms
+////
+
+/// Default border around custom fieldsets.
+/// @type Border
+$fieldset-border: 1px solid $medium-gray !default;
+
+/// Default padding inside custom fieldsets.
+/// @type Number
+$fieldset-padding: rem-calc(20) !default;
+
+/// Default margin around custom fieldsets.
+/// @type Number
+$fieldset-margin: rem-calc(18 0) !default;
+
+/// Default padding between the legend text and fieldset border.
+/// @type Number
+$legend-padding: rem-calc(0 3) !default;
+
+@mixin fieldset {
+  border: $fieldset-border;
+  padding: $fieldset-padding;
+  margin: $fieldset-margin;
+
+  legend {
+    // Covers up the fieldset's border to create artificial padding
+    background: $body-background;
+    padding: $legend-padding;
+    margin: 0;
+    margin-#{$global-left}: rem-calc(-3);
+  }
+}
+
+@mixin foundation-form-fieldset {
+  
+  @include breakpoint(small only){
+    legend {
+      margin-bottom: rem-calc(26);
+      line-height: 1.2;
+    }
+  }
+
+  @include breakpoint(medium up){
+    legend {
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+  }
+
+  @include breakpoint(large up){
+    legend {
+      margin-bottom: $form-spacing * 1.125;
+    }
+  }
+
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  legend {
+    color: $lilac;
+    font-family: $header-font-family;
+    width: 100%;
+    font-size: 1.25rem;
+  }
+
+  .fieldset {
+    @include fieldset;
+  }
+}
